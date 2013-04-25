@@ -1,22 +1,23 @@
 ---
 layout: default
 ---
-<% posts = (@getFilesAtPath('posts').toJSON().concat(@getFilesAtPath('voxels').toJSON())) %>
-<% for post in posts: %>
+<% var posts = getFilesAtPath('posts').toJSON().concat(getFilesAtPath('voxels').toJSON()) %>
+<% for (var i = 0; i < posts.length; i++) { %>
+  <% var post = posts[i]; %>
   <section class="post">
     <div class="header">
       <h1><a href="<%= post.url %>"><%= post.title %></a></h1>
-      <% if post.project: %>
+      <% if (post.project) { %>
         <div class="project">
-          <%- @partial('icons/' + post.project) %>
+          <%- partial('icons/' + post.project) %>
         </div>
-      <% else: %>
-        <div class="icon"><i class="icon-<%= post.icon or 'picture' %> icon-white"></i></div>
-      <% end %>
+      <% } else { %>
+        <div class="icon"><i class="icon-<%= post.icon || 'picture' %> icon-white"></i></div>
+      <% } %>
     </div>
     <p><%- post.description %></p>
   </section>
-<% end %>
+<% } %>
 
 <!-- videos -->
 <section>

@@ -42,10 +42,10 @@
     "matchdep": "~0.1.2",
     "browserify": "~2.12.0",
     "docpad-plugin-marked": "~2.1.1",
-    "docpad-plugin-eco": "~2.0.2",
     "docpad-plugin-images": "~2.0.0",
     "docpad-plugin-highlightjs": "~2.1.4",
-    "docpad-plugin-partials": "~2.6.2"
+    "docpad-plugin-partials": "~2.6.2",
+    "docpad-plugin-ejs": "git://github.com/perpetual-motion/docpad-plugin-ejs"
   },
   "keywords": []
 }

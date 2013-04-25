@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<section class="large">
+  <div class="header">
+    <h1>
+      <%- document.title %>&nbsp;
+      <em class="date"><%- document.date.toDateString() %></em>
+    </h1>
+    <% if (document.project) { %>
+        <div class="project">
+          <%- partial('icons/' + document.project) %>
+        </div>
+      <% } else { %>
+        <div class="icon"><i class="icon-<%= document.icon || 'picture' %> icon-white"></i></div>
+      <% } %>
+  </div>
+  <div class="content">
+    <%- content %>
+  </div>
+
+  <%- partial('share') %>
+</section>

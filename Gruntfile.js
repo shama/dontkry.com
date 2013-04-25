@@ -50,6 +50,7 @@ module.exports = function(grunt) {
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
   grunt.registerTask('default', ['clean', 'compass', 'browserify', 'docs']);
+  grunt.registerTask('dev', ['default', 'connect', 'watch']);
 
   // my own browserify task :'|
   grunt.registerMultiTask('browserify', function() {

@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title><%= @getPreparedTitle() %></title>
+  <title><%= getPreparedTitle() %></title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="body-<%- @document.slug %>">
+<body class="body-<%- document.slug %>">
   <article class="main">
     <section class="avatar">
       <a href="/">
@@ -19,17 +19,17 @@
     </section>
     
     <section class="icons">
-    <% icons = (['github', 'twitter', '750group', 'gruntjs', 'voxeljs']) %>
-    <% for icon in icons: %>
+    <% var icons = ['github', 'twitter', '750group', 'gruntjs', 'voxeljs'] %>
+    <% for (var i = 0; i < icons.length; i++) { %>
       <div class="icon">
-        <%- @partial('icons/' + icon) %>
+        <%- partial('icons/' + icons[i]) %>
       </div>
-    <% end %>
+    <% } %>
     </section>
 
-    <%- @content %>
+    <%- content %>
   </article>
-  <%- @partial('ga') %>
-  <%- @getBlock('scripts').add(['/js/bundle.js'].concat(@document.scripts or []), {defer:false,async:false}).toHTML() %>
+  <%- partial('ga') %>
+  <%- getBlock('scripts').add(['/js/bundle.js'].concat(document.scripts || []), {defer:false,async:false}).toHTML() %>
 </body>
 </html>
