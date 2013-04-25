@@ -1,0 +1,207 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities/general/clearfix";
+
+@include global-reset;
+
+@import "bootstrap";
+@import "monokai";
+
+$font-header: Helvetica, Arial, sans-serif;
+
+body {
+  background-color: #ddd;
+  font-size: 80%;
+  font-family: Verdana, sans-serif;
+  line-height: 18px;
+  color: #333;
+  /* From http://subtlepatterns.com/ps-neutral/ */
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABlBMVEX4+Pj09PQf/c7fAAAAGUlEQVR4XnXIMQ0AAACDMPyb3gxA0qswVX1+vw/xW46qyAAAAABJRU5ErkJggg==);
+}
+a {
+  color: #333;
+  &:hover {
+    color: #000;
+    text-decoration: none;
+  }
+}
+h1 {
+  font-family: $font-header;
+  font-size: 120%;
+}
+h1,h2,h3 {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+strong {
+  font-weight: bold;
+}
+.clear {
+  width: 100%;
+  display: block;
+  clear: both;
+}
+
+article.main {
+  min-width: 900px;
+  min-height: 600px;
+  position: relative;
+  margin: 3px 0 0 3px;
+}
+
+section {
+  @include box-sizing(border-box);
+  position: absolute;
+  padding: 0px;
+  margin: 3px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  @include border-corner-radius(top, right, 10px);
+  &:hover {
+    border: 1px solid #aaa;
+  }
+  h1 {
+    padding: 5px;
+    width: 80%;
+    float: left;
+  }
+  p, ul, ol, h2, h3, h4, h5 {
+    padding: 0 5px 5px 5px;
+  }
+  h2 {
+    margin-top: 10px;
+  }
+  p > code {
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    padding: 0 3px;
+    @include border-radius(3px);
+  }
+  pre {
+    margin: 5px 0;
+  }
+  .header {
+    background-color: #ccc;
+    width: 100%;
+    display: block;
+    clear: both;
+    @include clearfix;
+    margin-bottom: 10px;
+  }
+  .project {
+    @extend section;
+    @extend section.icon;
+    right: 0px;
+    position: absolute;
+  }
+  .date {
+    font-weight: normal;
+    font-size: 70%;
+    padding: 0 0 0 10px;
+  }
+}
+section.large {
+  max-width: 600px;
+}
+section.small {
+  max-width: 200px; 
+}
+section.wide {
+  width: 600px;
+}
+section.loading {
+  display: none;
+}
+section.avatar {
+  @include border-radius(60px);
+  padding: 0px;
+  overflow: hidden;
+  width: 70px;
+  height: 70px;
+  img {
+    margin: -5px 0 0 -5px;
+  }
+}
+section.icon {
+  @include border-radius(60px);
+  padding: 3px;
+  width: 38px;
+  height: 38px;
+}
+section.name {
+  @include border-radius(0px);
+  font-family: $font-header;
+  width: 180px;
+  text-align: center;
+  font-weight: bold;
+  padding: 3px 0;
+}
+section.about {
+  @include border-radius(0px);
+  width: 180px;
+  text-align: center;
+  font-size: 80%;
+  padding: 3px 0;
+}
+section.footer {
+  @include border-radius(0px);
+  width: 900px;
+  font-size: 80%;
+  padding: 3px;
+}
+section.post {
+  width: 300px;
+}
+section.repo {
+  font-size: 80%;
+  max-width: 300px;
+  img {
+    float: right;
+    padding: 3px 3px 0 0;
+  }
+}
+section#voxel {
+  @include border-radius(0px);
+  width: 800px;
+  height: 533px;
+  overflow: hidden;
+}
+
+.content {
+  margin-bottom: 20px;
+  pre {
+    margin-bottom: 20px;
+  }
+}
+
+.share {
+  padding: 10px 5px 0 5px;
+  background-color: #ccc;
+}
+
+.icons {
+  @include border-radius(0px);
+  border: 0px solid #333;
+  background-color: transparent;
+  width: 280px;
+  &:hover {
+    border: 0px solid #333;
+    background-color: transparent;
+  }
+}
+.icon {
+  @extend section;
+  @extend section.icon;
+  position: static;
+  float: left;
+}
+
+.body-404 {
+  .main {
+    width: 100%;
+    height: 100%;
+  }
+}

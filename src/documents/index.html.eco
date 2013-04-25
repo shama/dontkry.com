@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<% posts = (@getFilesAtPath('posts').toJSON().concat(@getFilesAtPath('voxels').toJSON())) %>
+<% for post in posts: %>
+  <section class="post">
+    <div class="header">
+      <h1><a href="<%= post.url %>"><%= post.title %></a></h1>
+      <% if post.project: %>
+        <div class="project">
+          <%- @partial('icons/' + post.project) %>
+        </div>
+      <% else: %>
+        <div class="icon"><i class="icon-<%= post.icon or 'picture' %> icon-white"></i></div>
+      <% end %>
+    </div>
+    <p><%- post.description %></p>
+  </section>
+<% end %>
+
+<!-- videos -->
+<section>
+  <iframe width="560" height="315" src="http://www.youtube.com/embed/khWOLOL2SzA?list=UUpqYfSWEcyBGorRGvPsHkgg" frameborder="0" allowfullscreen></iframe>
+</section>
+
+<!-- tweets -->
+<section style="height:250px;width:300px;">
+  <a class="twitter-timeline" href="https://twitter.com/shamakry" data-widget-id="324992886934487040">Tweets by @shamakry</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</section>

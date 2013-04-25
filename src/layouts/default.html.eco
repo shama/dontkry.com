@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= @getPreparedTitle() %></title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="body-<%- @document.slug %>">
+  <article class="main">
+    <section class="avatar">
+      <a href="/">
+      <img src="http://www.gravatar.com/avatar/5211ea711bb06482530172f77732f61a.png" /></a>
+    </section>
+    <section class="name">
+      kyle robinson young
+    </section>
+    <section class="about">
+      open source developer, musician, juggler and father.
+    </section>
+    
+    <section class="icons">
+    <% icons = (['github', 'twitter', '750group', 'gruntjs', 'voxeljs']) %>
+    <% for icon in icons: %>
+      <div class="icon">
+        <%- @partial('icons/' + icon) %>
+      </div>
+    <% end %>
+    </section>
+
+    <%- @content %>
+  </article>
+  <%- @partial('ga') %>
+  <%- @getBlock('scripts').add(['/js/bundle.js'].concat(@document.scripts or []), {defer:false,async:false}).toHTML() %>
+</body>
+</html>
