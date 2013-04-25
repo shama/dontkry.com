@@ -5,7 +5,7 @@ description: "If your Grunt task handles files you should be using this.files an
 project: gruntjs
 icon: fire
 ---
-The following contains **only some of the ways** users will target their files in a `Gruntfile.js`. The main job Grunt will do for you is take a bunch of configurations and give you a normalized simple array known as `this.files`. Here is a example that concatenates files:
+The following contains **only some of the ways** users will target their files in a `Gruntfile.js`. The main job Grunt will do for you is take a bunch of configurations and give you a normalized simple array known as `this.files`. Here is an example that will concatenate files:
 
 ``` javascript
 // our Grunt config
@@ -118,7 +118,7 @@ grunt.initConfig({
 });
 ```
 
-Now you have daily logs concatenated. Oh yeah see how I used a template (`<%= ... %>`) within the `dest`? Make sure you process those templates `this.data` consumers.
+Now you have daily logs concatenated. Oh yeah see how I used a template (`<%= ... %>`) within the `dest`? Make sure you process those templates `this.data` consumers... or just use `this.files` instead.
 
 <br/>
 We are just skimming the surface though. Here are some of the other file matching options availble: `nonull`, `dot`, `flatten`, `matchBase`, `cwd`, `ext`, `rename` as well as all the [node-glob](https://github.com/isaacs/node-glob) and [minimatch](https://github.com/isaacs/minimatch) options. [View the Grunt docs](http://gruntjs.com/configuring-tasks#files) for more information on file matching.
