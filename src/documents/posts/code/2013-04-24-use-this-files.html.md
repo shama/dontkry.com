@@ -123,7 +123,7 @@ Now you have daily logs concatenated. Oh yeah see how I used a template (`<%= ..
 <br/>
 We are just skimming the surface though. Here are some of the other file matching options availble: `nonull`, `dot`, `flatten`, `matchBase`, `cwd`, `ext`, `rename` as well as all the [node-glob](https://github.com/isaacs/node-glob) and [minimatch](https://github.com/isaacs/minimatch) options. [View the Grunt docs](http://gruntjs.com/configuring-tasks#files) for more information on file matching.
 
-The only acceptable use of `this.data` is if your task doesn't ever handle files. But those tasks are rare in the Grunt world.
+The only acceptable use of `this.data` in my opinion is if your task doesn't handle files. Those tasks are usually rare.
 
 ## Conclusion
 It doesn't matter if you won't use these features. **Other Grunt users will.** Grunt was made to manage files. So if you're not utilizing `this.files` for managing files then why are you using Grunt?
