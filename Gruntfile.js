@@ -27,6 +27,9 @@ module.exports = function(grunt) {
       },
     },
     clean: ['dist/'],
+    spell: {
+      docs: ['src/documents/posts/**/*'],
+    },
     watch: {
       docs: {
         files: ['src/**/*', 'docpad.js', '!src/public/scss/*', '!src/public/js/**/*'],
