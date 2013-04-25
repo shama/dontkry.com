@@ -52,7 +52,7 @@
   <div class="header">
     <h1>
       Use this.files Not this.data&nbsp;
-      <em class="date">Wed Apr 24 2013</em>
+      <em class="date">Thu Apr 25 2013</em>
     </h1>
     
         <div class="project">
@@ -62,7 +62,7 @@
       
   </div>
   <div class="content">
-    <p>The following contains <strong>only some of the ways</strong> users will target their files in a <code>Gruntfile.js</code>. The main job Grunt will do for you is take a bunch of configurations and give you a normalized simple array known as <code>this.files</code>. Here is a example that concatenates files:</p>
+    <p>The following contains <strong>only some of the ways</strong> users will target their files in a <code>Gruntfile.js</code>. The main job Grunt will do for you is take a bunch of configurations and give you a normalized simple array known as <code>this.files</code>. Here is an example that will concatenate files:</p>
 <pre class="highlighted"><code class="javascript"><span class="comment">// our Grunt config</span>
 grunt.initConfig({
   example: {
@@ -143,7 +143,7 @@ Now what if I want to configure my <code>Gruntfile.js</code> to only compile fil
     },
   },
 });</code></pre>
-<p>Now you have daily logs concatenated. Oh yeah see how I used a template (<code>&lt;%= ... %&gt;</code>) within the <code>dest</code>? Make sure you process those templates <code>this.data</code> consumers.</p>
+<p>Now you have daily logs concatenated. Oh yeah see how I used a template (<code>&lt;%= ... %&gt;</code>) within the <code>dest</code>? Make sure you process those templates <code>this.data</code> consumers... or just use <code>this.files</code> instead.</p>
 <p><br/>
 We are just skimming the surface though. Here are some of the other file matching options availble: <code>nonull</code>, <code>dot</code>, <code>flatten</code>, <code>matchBase</code>, <code>cwd</code>, <code>ext</code>, <code>rename</code> as well as all the <a href="https://github.com/isaacs/node-glob">node-glob</a> and <a href="https://github.com/isaacs/minimatch">minimatch</a> options. <a href="http://gruntjs.com/configuring-tasks#files">View the Grunt docs</a> for more information on file matching.</p>
 <p>The only acceptable use of <code>this.data</code> is if your task doesn&#39;t ever handle files. But those tasks are rare in the Grunt world.</p>
