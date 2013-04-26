@@ -31,5 +31,8 @@
   </article>
   <%- partial('ga') %>
   <%- getBlock('scripts').add(['/js/bundle.js'].concat(document.scripts || []), {defer:false,async:false}).toHTML() %>
+  <% if (document.slug === 'index') { %>
+    <%- partial('ads') %>
+  <% } %>
 </body>
 </html>
