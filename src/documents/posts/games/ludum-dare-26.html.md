@@ -4,7 +4,13 @@ title: "ludum dare 26 - post mortem"
 description: "My first ludum dare. Theme: Minimalism."
 project: voxeljs
 ---
-I was introduced to [Ludum Dare](ludumdare.com/compo/) in a [tweet by hughskennedy](https://twitter.com/hughskennedy/status/327234957875486720) last Wednesday. It is a friendly game competition where developers are pitted to make a game based on a theme within 48 hours. The theme this time was: **Minimalism**. Perfect for [voxel.js](http://voxeljs.com).
+**Play the game here: [http://shama.github.io/ludum-dare-26/](http://shama.github.io/ludum-dare-26/)**
+
+**[View my entry](http://www.ludumdare.com/compo/ludum-dare-26/?action=preview&uid=22120) on Ludum Dare**
+
+<hr/>
+
+I was introduced to [Ludum Dare](ludumdare.com/compo/) in a [tweet by hughskennedy](https://twitter.com/hughskennedy/status/327234957875486720) last Wednesday. It is a friendly game competition where developers are pitted to make a game based on a theme within 48 hours. The theme was: **Minimalism**. Perfect for [voxel.js](http://voxeljs.com).
 
 I've been recently researching various pathfinding techniques. I came across a really well done [a star](https://github.com/superjoe30/node-astar) library which uses ASCII mazes as test cases. Inspired by those ASCII mazes, at the start of the competition I set off to create just a simple voxel maze.
 
