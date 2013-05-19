@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "grunt": "~0.4.1",
-    "grunt-contrib-watch": "~0.3.1",
+    "grunt-contrib-watch": "~0.4.3",
     "grunt-contrib-compass": "~0.2.0",
     "grunt-contrib-connect": "~0.3.0",
     "grunt-contrib-clean": "~0.4.1",
@@ -46,7 +46,8 @@
     "docpad-plugin-images": "~2.0.0",
     "docpad-plugin-highlightjs": "~2.1.4",
     "docpad-plugin-partials": "~2.6.2",
-    "docpad-plugin-ejs": "git://github.com/perpetual-motion/docpad-plugin-ejs"
+    "docpad-plugin-ejs": "git://github.com/perpetual-motion/docpad-plugin-ejs",
+    "grunt-browserify": "~1.0.1"
   },
   "keywords": []
 }

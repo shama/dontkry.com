@@ -23,7 +23,9 @@ module.exports = function(grunt) {
     docs: require('./docpad.js')(),
     connect: {
       server: {
-        options: { base: 'dist/' },
+        options: {
+          base: 'dist/'
+        },
       },
     },
     clean: ['dist/'],
@@ -31,12 +33,16 @@ module.exports = function(grunt) {
       docs: ['src/documents/posts/**/*'],
     },
     watch: {
+      livereload: {
+        options: { livereload: true },
+        files: ['dist/css/*'],
+      },
       docs: {
         files: ['src/**/*', 'docpad.js', '!src/public/scss/*', '!src/public/js/**/*'],
         tasks: ['docs'],
       },
       js: {
-        files: ['src/public/js/*.js'],
+        files: ['src/public/js/*.js', 'Gruntfile.js'],
         tasks: ['browserify:dist/js/bundle.js', 'docs'],
       },
       css: {
@@ -51,24 +57,8 @@ module.exports = function(grunt) {
   });
 
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+  grunt.loadNpmTasks('grunt-browserify');
 
   grunt.registerTask('default', ['clean', 'compass', 'browserify', 'docs']);
   grunt.registerTask('dev', ['default', 'connect', 'watch']);
-
-  // my own browserify task :'|
-  grunt.registerMultiTask('browserify', function() {
-    grunt.util.async.forEachSeries(this.files, function(file, next) {
-      var files = grunt.file.expand({filter: 'isFile'}, file.src).map(function(f) {
-        return require('path').resolve(f);
-      });
-      var b = require('browserify')(files).bundle();
-      var dir = require('path').dirname(file.dest);
-      if (!grunt.file.exists(dir)) grunt.file.mkdir(dir);
-      b.pipe(require('fs').createWriteStream(file.dest));
-      b.on('end', function() {
-        grunt.log.ok('Bundled ' + file.dest);
-        next();
-      });
-    }, this.async());
-  });
 };
