@@ -35,7 +35,7 @@ module.exports = function(grunt) {
     watch: {
       livereload: {
         options: { livereload: true },
-        files: ['dist/css/*'],
+        files: ['dist/**/*'],
       },
       docs: {
         files: ['src/**/*', 'docpad.js', '!src/public/scss/*', '!src/public/js/**/*'],
@@ -57,7 +57,6 @@ module.exports = function(grunt) {
   });
 
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
-  grunt.loadNpmTasks('grunt-browserify');
 
   grunt.registerTask('default', ['clean', 'compass', 'browserify', 'docs']);
   grunt.registerTask('dev', ['default', 'connect', 'watch']);

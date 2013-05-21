@@ -18,4 +18,4 @@ shama.yaw.position.set(0, 10, 0);
 shama.possess();
 
 // resize to fit element
-game.view.resizeWindow(800, 533);
+game.view.resizeWindow(770, 533);

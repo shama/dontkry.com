@@ -8,6 +8,8 @@ project: voxeljs
 
 **[View my entry](http://www.ludumdare.com/compo/ludum-dare-26/?action=preview&uid=22120) on Ludum Dare**
 
+**[Full source code](https://github.com/shama/ludum-dare-26) on Github**
+
 <hr/>
 
 I was introduced to [Ludum Dare](ludumdare.com/compo/) in a [tweet by hughskennedy](https://twitter.com/hughskennedy/status/327234957875486720) last Wednesday. It is a friendly game competition where developers are pitted to make a game based on a theme within 48 hours. The theme was: **Minimalism**. Perfect for [voxel.js](http://voxeljs.com).

@@ -26,7 +26,6 @@
     "node": ">= 0.8.0"
   },
   "dependencies": {
-    "atlaspack": "~0.2.1",
     "jquery-browserify": "~1.8.1",
     "lodash": "~1.2.0",
     "voxel-engine": "~0.17.0",
@@ -40,14 +39,13 @@
     "grunt-contrib-clean": "~0.4.1",
     "grunt-docs": "~0.5.0",
     "grunt-spell": "~0.2.1",
+    "grunt-browserify": "~1.0.1",
     "matchdep": "~0.1.2",
-    "browserify": "~2.12.0",
     "docpad-plugin-marked": "~2.1.1",
     "docpad-plugin-images": "~2.0.0",
     "docpad-plugin-highlightjs": "~2.1.4",
     "docpad-plugin-partials": "~2.6.2",
-    "docpad-plugin-ejs": "git://github.com/perpetual-motion/docpad-plugin-ejs",
-    "grunt-browserify": "~1.0.1"
+    "docpad-plugin-ejs": "git://github.com/perpetual-motion/docpad-plugin-ejs"
   },
   "keywords": []
 }
