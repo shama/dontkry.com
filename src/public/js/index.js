@@ -1,3 +1,2 @@
-var $ = require('jquery-browserify');
-var _ = require('lodash');
-
+//var $ = require('jquery-browserify');
+//var _ = require('lodash');

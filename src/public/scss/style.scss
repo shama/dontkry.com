@@ -32,7 +32,6 @@ a {
 h1 {
   font-family: $font-header;
   font-size: 120%;
-  text-transform: uppercase;
 }
 h1,h2,h3 {
   font-weight: bold;
@@ -101,14 +100,13 @@ blockquote {
 }
 
 .container > .content {
-  width: 770px;
+  width: 670px;
   margin-left: 200px;
 }
 
 // posts
 .post {
   @include clearfix;
-  @include border-top-right-radius(20px);
   border-bottom: 8px dotted #eee;
   width: 100%;
   margin-bottom: 40px;
@@ -140,11 +138,15 @@ blockquote {
     margin-top: 10px;
     text-transform: uppercase;
     font-size: 130%;
+    a {
+      text-decoration: none;
+    }
   }
-  p > code {
+  p > code, h2 > code {
     background-color: #ddd;
     border: 1px solid #ccc;
     padding: 0 3px;
+    text-transform: none;
     @include border-radius(3px);
   }
   pre {
@@ -155,6 +157,10 @@ blockquote {
       font-size: 90%;
       line-height: 18px;
     }
+  }
+  ul {
+    list-style-type: disc;
+    list-style-position: inside;
   }
 }
 
