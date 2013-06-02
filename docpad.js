@@ -1,6 +1,7 @@
 module.exports = function() {
   var path = require('path');
   var _s = require('underscore.string');
+
   var config = {
     outPath: 'dist',
     templateData: {
@@ -30,11 +31,28 @@ module.exports = function() {
         }
         return content;
       },
+      printItems: function(items) {
+        var out = '';
+        for (var i = 0; i < items.length; i++) {
+          var item = items[i];
+          if (!item.title) {
+            item.title = item.slug;
+            item.url = 'http://shama.github.io/' + item.slug;
+          }
+          var url = item.url || 'http://' + item.slug + '.com'
+          out += '<li><a href="' + url + '" target="_blank">';
+          out += '<img src="images/projects/' + item.slug + '.png" alt="' + item.title + '" />';
+          out += '<div>' + item.title + '</div></a>';
+          out += '</li>';
+        }
+        return out;
+      },
     },
     ignorePaths: [
       path.join(__dirname, 'src', 'public', 'scss'),
       path.join(__dirname, 'src', 'public', 'js'),
     ],
   };
+
   return config;
 };

@@ -48,6 +48,11 @@ blockquote {
   padding: 3px 5px;
   color: #777;
 }
+hr {
+  width: 100%;
+  border: 0;
+  border-bottom: 8px dotted #eee;
+}
 .clear {
   width: 100%;
   display: block;
@@ -82,6 +87,9 @@ blockquote {
       border: 1px solid transparent;
       background-color: transparent;
     }
+  }
+  .icons {
+    padding-top: 20px;
   }
   .icon {
     @extend .avatar;
@@ -181,4 +189,70 @@ blockquote {
 .share {
   padding: 10px 5px 0 5px;
   background-color: #ccc;
+}
+
+.nav {
+  display: block;
+  width: 100%;
+  padding-top: 25px;
+  a {
+    font-size: 150%;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    display: block;
+    &:hover {
+      color: #666;
+    }
+  }
+}
+
+.projects {
+  h1 {
+    text-transform: uppercase;
+    font-size: 130%;
+    margin-top: 40px;
+  }
+  ul {
+    margin-top: 20px;
+    width: 100%;
+    @include clearfix;
+  }
+  li {
+    width: 200px;
+    height: 80px;
+    float: left;
+    margin: 0 5px 3px 0;
+    @include box-sizing(border-box);
+    position: relative;
+    overflow: hidden;
+    a {
+      width: 200px;
+      height: 80px;
+      border: 1px solid #ddd;
+      display: block;
+      text-align: center;
+      &:hover div {
+        bottom: 0px;
+      }
+    }
+    div {
+      @include transition-duration(0.5s);
+      position: absolute;
+      bottom: -100px;
+      background-color: #fff;
+      color: #333;
+      padding: 3px;
+      width: 100%;
+      @include box-sizing(border-box);
+    }
+  }
+}
+
+.cols {
+  @include column-count(2);
 }
