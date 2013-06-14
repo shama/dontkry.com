@@ -78,7 +78,7 @@ During the transition to ES6 modules, what will UMD look like? Can it natively d
 Stop worrying and use a build tool. Pick whatever module definition you like. Then transform the modules as you build.
 
 ### What About Those Who Don't Want to Use a Build Tool?
-Too bad for them. Think about the audience you're catering to. They are copying and pasting your module into files and adding a bunch of script tags to their page. Those users should have no problem also modifying your module to fit their needs. If anything by not catering to that use care you're doing them a favor by pushing them to a better workflow.
+Too bad for them. Think about the audience you're catering to. They are copying and pasting your module into files and adding a bunch of script tags to their page. Those users should have no problem also modifying your module to fit their needs. If anything by not catering to that use case you're doing them a favor by pushing them to a better workflow.
 
 ## [Browserify](http://browserify.org/)
 [Browserify](http://browserify.org/) is a great build tool for this. Through transforms it enables you to consume any module.
@@ -132,7 +132,7 @@ npm install deamdify es6ify deglobalify
 browserify -t deamdify -t es6ify -t deglobalify main.js -o bundle.js
 ```
 
-## Not Using `npm`?
+## NOT USING npm?
 We've got a transform for that: [decomponentify](https://npmjs.org/package/decomponentify) and [debowerify](https://npmjs.org/package/debowerify).
 
 ## Integration with Grunt
