@@ -55,6 +55,10 @@ WAT. Yes that works and you're an awesome module author for taking that extra st
 
 The truth is most authors won't configure UMD in all their modules or if they do; they likely will do it wrong rendering the a definition ineffective or just plain broken.
 
+> **Update:** [@BlaineBublitz](http://twitter.com/BlaineBublitz) pointed out the above UMD wrapper is incorrect as the AMD build tools will expose `exports` as an object. Thus we should check for AMD first for the above to actually work. 
+
+> The funny thing is, I copied the above UMD example directly from [https://github.com/umdjs/umd](https://github.com/umdjs/umd). I don't want this post to rag on UMD because UMD has very good intentions. But it kind of drives the point home that even UMD's own examples are incorrect.
+
 ## ES6 to the Rescue?
 Harmony is on horizon and it includes a module definition:
 
