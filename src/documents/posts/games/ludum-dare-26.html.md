@@ -2,6 +2,7 @@
 layout: post
 title: "ludum dare 26 - post mortem"
 description: "My first ludum dare. Theme: Minimalism."
+date: 2013-04-29
 project: voxeljs
 ---
 **Play the game here: [http://shama.github.io/ludum-dare-26/](http://shama.github.io/ludum-dare-26/)**

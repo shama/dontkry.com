@@ -2,6 +2,7 @@
 layout: post
 title: "Trailing Commas"
 description: "They are good"
+date: 2013-06-06
 ---
 I see this a lot:
 

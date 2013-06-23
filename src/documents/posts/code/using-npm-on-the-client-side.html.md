@@ -2,6 +2,7 @@
 layout: post
 title: "Using npm on the client side"
 description: "It is not just for the server side!"
+date: 2013-05-28
 project: npm
 ---
 ## Package Manager Anonymous

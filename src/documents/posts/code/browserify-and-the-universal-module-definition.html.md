@@ -2,6 +2,7 @@
 layout: post
 title: "Browserify and the Universal Module Definition"
 description: "How I Learned to Stop Worrying and Love the Browserify"
+date: 2013-06-14
 ---
 ## How I Learned to Stop Worrying and Love the Browserify
 

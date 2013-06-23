@@ -2,6 +2,7 @@
 layout: post
 title: "Use this.files Not this.data"
 description: "If your Grunt task handles files you should be using this.files and not this.data"
+date: 2013-04-24
 project: gruntjs
 icon: fire
 ---
