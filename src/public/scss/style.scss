@@ -6,6 +6,7 @@
 
 @import "bootstrap";
 @import "monokai";
+@import "mixins";
 
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic);
 
@@ -68,6 +69,11 @@ hr {
   position: fixed;
   top: 10px;
   left: 10px;
+  @include phone() {
+    width: 100%;
+    clear: both;
+    position: static;
+  }
   ul {
     margin: 0;
     padding: 0;
@@ -75,6 +81,10 @@ hr {
   li {
     list-style: none;
     width: 100%;
+    @include phone() {
+      width: 30%;
+      float: left;
+    }
   }
   .avatar {
     @include border-radius(60px);
@@ -90,6 +100,7 @@ hr {
   }
   .icons {
     padding-top: 20px;
+    @include phone() { padding-top: 0px; }
   }
   .icon {
     @extend .avatar;
@@ -104,12 +115,18 @@ hr {
     font-family: $font-header;
     font-weight: bold;
     padding: 3px 0;
+    @include phone() { display: none; }
   }
 }
 
 .container > .content {
   width: 670px;
   margin-left: 200px;
+  @include phone() {
+    width: 100%;
+    clear: both;
+    margin: 10px 0 0 0;
+  }
 }
 
 // posts
@@ -164,6 +181,7 @@ hr {
       font-family: monospace, courier;
       font-size: 90%;
       line-height: 18px;
+      @include phone() { overflow: auto; }
     }
   }
   ul {
@@ -195,6 +213,10 @@ hr {
   display: block;
   width: 100%;
   padding-top: 25px;
+  @include phone() {
+    padding-top: 0px;
+    padding-left: 5px;
+  }
   a {
     font-size: 150%;
     font-weight: bold;
@@ -205,6 +227,7 @@ hr {
     border-bottom: 1px solid #ddd;
     width: 100%;
     display: block;
+    @include phone() { line-height: 20px; }
     &:hover {
       color: #666;
     }
@@ -230,12 +253,14 @@ hr {
     @include box-sizing(border-box);
     position: relative;
     overflow: hidden;
+    @include phone() { width: 100%; }
     a {
       width: 200px;
       height: 80px;
       border: 1px solid #ddd;
       display: block;
       text-align: center;
+      @include phone() { margin: 0 auto; }
       &:hover div {
         bottom: 0px;
       }
@@ -255,4 +280,5 @@ hr {
 
 .cols {
   @include column-count(2);
+  @include phone() { @include column-count(1); }
 }
