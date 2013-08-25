@@ -36,6 +36,7 @@ module.exports = function(grunt) {
       livereload: {
         options: { livereload: true },
         files: ['dist/**/*'],
+        tasks: ['beep'],
       },
       docs: {
         files: ['src/**/*', 'docpad.js', '!src/public/scss/*', '!src/public/js/**/*'],
