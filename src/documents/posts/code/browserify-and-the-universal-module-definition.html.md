@@ -60,6 +60,8 @@ The truth is most authors won't configure UMD in all their modules or if they do
 
 > The funny thing is, I copied the above UMD example directly from [https://github.com/umdjs/umd](https://github.com/umdjs/umd). I don't want this post to rag on UMD because UMD has very good intentions. But it kind of drives the point home that even UMD's own examples are incorrect.
 
+> **Update 2:** Kudos to [@BlaineBublitz](http://twitter.com/BlaineBublitz) for sending a pull request and fixing this issue: [https://github.com/umdjs/umd/commit/992cc0d071b7ebcd7feaad2a5349bdbeab09a0fe](https://github.com/umdjs/umd/commit/992cc0d071b7ebcd7feaad2a5349bdbeab09a0fe).
+
 ## ES6 to the Rescue?
 Harmony is on horizon and it includes a module definition:
 
