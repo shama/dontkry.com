@@ -282,3 +282,5 @@ hr {
   @include column-count(2);
   @include phone() { @include column-count(1); }
 }
+
+@import "resume";
