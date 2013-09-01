@@ -29,9 +29,6 @@ module.exports = function(grunt) {
       },
     },
     clean: ['dist/'],
-    spell: {
-      docs: ['src/documents/posts/**/*'],
-    },
     watch: {
       livereload: {
         options: { livereload: true },
