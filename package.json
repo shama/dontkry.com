@@ -27,7 +27,8 @@
   },
   "dependencies": {
     "voxel-engine": "~0.17.3",
-    "voxel-player": "~0.1.0"
+    "voxel-player": "~0.1.0",
+    "highlight.js": "~7.3.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -40,7 +41,6 @@
     "matchdep": "~0.1.2",
     "docpad-plugin-marked": "~2.1.1",
     "docpad-plugin-images": "~2.0.0",
-    "docpad-plugin-highlightjs": "~2.1.4",
     "docpad-plugin-partials": "~2.6.2",
     "docpad-plugin-ejs": "git://github.com/perpetual-motion/docpad-plugin-ejs",
     "grunt-beep": "~0.3.0"
