@@ -3,10 +3,8 @@ layout: default
 ---
 <div class="post">
   <div class="header">
-    <h1>
-      <%- document.title %>&nbsp;
-      <em class="date"><%- document.date.toDateString() %></em>
-    </h1>
+    <h1><%- document.title %></h1>
+    <em class="date"><%- document.date.toDateString() %></em>
     <% if (document.project) { %>
         <div class="project">
           <%- partial('icons/' + document.project) %>
