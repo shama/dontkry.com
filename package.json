@@ -32,10 +32,6 @@
     "voxel-engine": "~0.17.3",
     "voxel-player": "~0.1.0",
     "highlight.js": "~7.3.0",
-    "backbone": "~1.0.0",
-    "jquery2": "~2.0.3-a",
-    "lodash": "~2.2.0",
-    "underscore": "~1.5.2",
     "jquery-browserify": "~1.8.1"
   },
   "devDependencies": {
