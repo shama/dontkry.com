@@ -22,13 +22,21 @@
       "url": "https://github.com/shama/dontkry.com/blob/master/LICENSE-MIT"
     }
   ],
+  "scripts": {
+    "start": "cd app && beefy app.js 8080 -- -d"
+  },
   "engines": {
     "node": ">= 0.8.0"
   },
   "dependencies": {
     "voxel-engine": "~0.17.3",
     "voxel-player": "~0.1.0",
-    "highlight.js": "~7.3.0"
+    "highlight.js": "~7.3.0",
+    "backbone": "~1.0.0",
+    "jquery2": "~2.0.3-a",
+    "lodash": "~2.2.0",
+    "underscore": "~1.5.2",
+    "jquery-browserify": "~1.8.1"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -43,7 +51,9 @@
     "docpad-plugin-images": "~2.0.0",
     "docpad-plugin-partials": "~2.6.2",
     "docpad-plugin-ejs": "git://github.com/perpetual-motion/docpad-plugin-ejs",
-    "grunt-beep": "~0.3.0"
+    "grunt-beep": "~0.3.0",
+    "beefy": "~0.4.4",
+    "docpad-plugin-rss": "~2.0.1"
   },
   "keywords": []
 }
