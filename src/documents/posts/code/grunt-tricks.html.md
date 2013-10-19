@@ -124,7 +124,8 @@ grunt.initConfig({
         // One day ago
         var dayago = (new Date()).setDate((new Date()).getDate()-1);
 
-        // If the file was modified in the last day, include it otherwise filter it
+        // If the file was modified in the last day, give to the task
+        // otherwise filter it out
         return (filemod > dayago);
       },
     },
