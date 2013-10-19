@@ -143,8 +143,8 @@ grunt.initConfig({
 function lastModified(minutes) {
   return function(filepath) {
     var filemod = (require('fs').statSync(filepath)).mtime;
-    var dayago = (new Date()).setDate((new Date()).getMinutes() - minutes);
-    return (filemod > dayago);
+    var timeago = (new Date()).setDate((new Date()).getMinutes() - minutes);
+    return (filemod > timeago);
   }
 }
 grunt.initConfig({
