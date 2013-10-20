@@ -1,7 +1,5 @@
-module.exports = (grunt) ->
-  'use strict'
-
-  grunt.initConfig
+module.exports = ->
+  @initConfig
     browserify:
       'dist/js/bundle.js': ['src/public/js/index.js']
       voxel:
@@ -50,6 +48,6 @@ module.exports = (grunt) ->
         files: ['src/public/js/voxel/*.js']
         tasks: ['browserify:voxel']
 
-  require('matchdep').filterDev('grunt-*').forEach grunt.loadNpmTasks
-  grunt.registerTask 'default', ['clean', 'compass', 'browserify', 'docs']
-  grunt.registerTask 'dev', ['default', 'connect', 'watch']
+  require('matchdep').filterDev('grunt-*').forEach @loadNpmTasks
+  @registerTask 'default', ['clean', 'compass', 'browserify', 'docs']
+  @registerTask 'dev', ['default', 'connect', 'watch']

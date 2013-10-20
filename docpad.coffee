@@ -49,15 +49,12 @@ module.exports = ->
         out
 
     ignorePaths: [path.join(__dirname, 'src', 'public', 'scss'), path.join(__dirname, 'src', 'public', 'js')]
+
     collections:
       posts: ->
         @getCollection('html').findAllLive
-          relativeOutDirPath:
-            $in: ['posts/code', 'posts/games']
-        , [date: -1]
+          relativeOutDirPath: $in: ['posts/code', 'posts/games'], [date: -1]
 
     plugins:
       rss:
         collection: 'posts'
-
-  config
