@@ -48,6 +48,7 @@ module.exports = ->
         files: ['src/public/js/voxel/*.js']
         tasks: ['browserify:voxel']
 
-  require('matchdep').filterDev('grunt-*').forEach @loadNpmTasks
+  @loadNpmTasks(task) for task in require('matchdep').filterDev('grunt-*')
+
   @registerTask 'default', ['clean', 'compass', 'browserify', 'docs']
   @registerTask 'dev', ['default', 'connect', 'watch']
