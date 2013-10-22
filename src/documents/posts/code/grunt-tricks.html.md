@@ -2,6 +2,7 @@
 layout: post
 title: "Grunt Tricks: Part One"
 description: "Common Grunt problems and their solutions"
+project: gruntjs
 date: 2013-10-17
 ---
 Here are a few solutions to common problems you may encounter while using Grunt.
