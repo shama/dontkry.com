@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Modules: The Right Way"
-description: "An exploration into modules and where they should go"
+description: "A mindful exploration into modules"
 date: 2013-10-22
 ---
 A module done "the right way" primarily means: it works. It doesn't error or run code in an unexpected way when you're deploying, have other developers running your code or come back to update a project some time in the future. Other problems like files space and ease of use should be secondary concerns.
