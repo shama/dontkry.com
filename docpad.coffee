@@ -48,6 +48,11 @@ module.exports = ->
           i++
         out
 
+      # edit links to gh
+      ghedit: ->
+        filename = @document.relativeDirPath + '/' + @document.filename
+        return '<a href="https://github.com/shama/dontkry.com/edit/master/src/documents/' + filename + '" target="_blank">edit this page</a>'
+
     ignorePaths: [path.join(__dirname, 'src', 'public', 'scss'), path.join(__dirname, 'src', 'public', 'js')]
 
     collections:

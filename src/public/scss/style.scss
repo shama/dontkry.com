@@ -165,7 +165,7 @@ hr {
       text-decoration: none;
     }
   }
-  p > code, h2 > code {
+  p > code, h2 > code, li > code {
     background-color: #ddd;
     border: 1px solid #ccc;
     padding: 0 3px;
@@ -199,6 +199,16 @@ hr {
   }
   p, ul, ol, h2, h3, h4, h5 {
     padding: 0 5px 5px 5px;
+  }
+  .edit {
+    font-size: 80%;
+    width: 98%;
+    padding: 15px 5px 5px 5px;
+    text-align: right;
+    a {
+      text-decoration: none;
+      &:hover { color: #666; }
+    }
   }
 }
 
