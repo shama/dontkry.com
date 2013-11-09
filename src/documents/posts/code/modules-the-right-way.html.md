@@ -17,7 +17,7 @@ Global systems are classic where all your dependencies reside in a single locati
 | --- animal
 | - apps
 | --- grizzly extends MODULES/bear
-| --- koala extends MODULES/bear
+| --- polar extends MODULES/bear
 | --- panda extends MODULES/bear
 ```
 
@@ -81,7 +81,7 @@ A flat structure or peer dependencies is a step towards the right way. Each proj
 | ----- modules
 | ------- bear extends animal
 | ------- animal
-| --- koala extends modules/bear
+| --- polar extends modules/bear
 | ----- modules
 | ------- bear extends animal
 | ------- animal
@@ -178,7 +178,7 @@ Nested dependencies solve the issues of global and flat systems. Each module is 
 | ------- bear extends modules/animal
 | --------- modules
 | ----------- animal
-| --- koala extends modules/bear
+| --- polar extends modules/bear
 | ----- modules
 | ------- bear extends modules/animal
 | --------- modules
