@@ -23,7 +23,7 @@ This gives you the command `npm` in your terminal.
 
 Create a `package.json` file. This describes your package. Or use `npm init` to ask a series of questions and npm will create a `package.json` for you.
 
-```json
+``` json
 {
   "name": "mymodule",
   "version": "0.1.0"
@@ -54,7 +54,7 @@ Install it with `npm install browserify -g`. The `-g` will install the package g
 
 Create an `index.js` entry point with the following:
 
-```js
+``` javascript
 // Use a Node.js core library
 var url = require('url');
 
@@ -70,7 +70,7 @@ To bundle this to run on the browser type the command: `browserify index.js > bu
 ## A Simple Module
 Small modules are the reason why npm is so successful. They are easy to create, maintain and share. Create another file named `hasher.js` with the following:
 
-```js
+``` javascript
 // Use a Node.js core library
 var url = require('url');
 
@@ -83,7 +83,7 @@ module.exports = function(url) {
 
 Now modify your `index.js` file to the following:
 
-```js
+``` javascript
 var hasher = require('./hasher.js');
 var hash = hasher(window.location);
 console.log(hash);
@@ -98,7 +98,7 @@ This is the advantage of creating and using lots of small modules. One module ma
 
 A quick `npm search hash change` revealed a few options. Lets go with `hash-change`. After a quick peruse of the [hash-change read me](https://npmjs.org/package/hash-change) we know how to use it. So let's edit our `index.js`:
 
-```js
+``` javascript
 require('hash-change').on('change', function(hash) {
   console.log('Goto page: ' + hash);
 });
@@ -122,7 +122,7 @@ The lazy way is to load assets directly from the `node_modules` folder:
 
 A method more similar to browserify is [npm-css](https://npmjs.org/package/npm-css). Install with `npm install npm-css -g` and bundle with `npm-css index.css > bundle.css`:
 
-```css
+``` css
 /* Use CSS from your node_modules folder */
 @import "npm_module_name";
 
@@ -134,7 +134,7 @@ I don't enjoy writing CSS so I use a preprocessor. My preference is [sass/compas
 
 Install rework with `npm install rework -g`. Then create the following file `style.css`:
 
-```css
+``` css
 body {
   background: linear-gradient(#eee, #ddd);
 }
@@ -142,7 +142,7 @@ body {
 
 We then bundle our css with `rework -v webkit,moz < style.css > bundle.css` and it creates the file:
 
-```css
+``` css
 body {
   background: -webkit-linear-gradient(#eee, #ddd);
   background: -moz-linear-gradient(#eee, #ddd);
@@ -155,7 +155,7 @@ It does a lot more than that though so checkout [rework's readme](https://npmjs.
 ## Images
 Images are fairly straight forward:
 
-```shell
+``` shell
 cp -R node_modules/module/images/* dist/images/.
 ```
 
@@ -172,7 +172,7 @@ How are these tools are tied together is heavily debated. So I'll just describe 
 ### Simple Shell Script
 Shell scripts for small modules are easy to write. Just put the commands you would have normally typed into a file. Create a file named `bin/build` with the following:
 
-```shell
+``` shell
 #!/bin/bash
 rm -rf dist
 mkdir -p dist/js
@@ -189,7 +189,7 @@ cp index.html dist/index.html
 ### Grunt
 If you need build operations a bit more front end friendly consider [Grunt](http://gruntjs.com). Grunt ties build operations together through a `Gruntfile.js`. Each of the tasks source input files and destination output files are normalized through a Grunt config. An example `Gruntfile.js` for the same operations as above would be:
 
-```js
+``` javascript
 module.exports = funciton(grunt) {
   grunt.initConfig({
     clean: ['dist/'],
@@ -224,7 +224,7 @@ First install the grunt cli tool globally with: `npm install grunt-cli -g`.
 
 Then install grunt and the tasks we would like to use locally:
 
-```shell
+``` shell
 npm install grunt grunt-contrib-clean \
 grunt-contrib-copy grunt-rework grunt-browserify --save-dev
 ```
