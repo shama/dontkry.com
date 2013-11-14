@@ -197,7 +197,7 @@ module.exports = funciton(grunt) {
       'dist/js/index.js': ['js/index.js']
     },
     rework: {
-      'dist/css/style.js': ['css/style.css'],
+      'dist/css/style.css': ['css/style.css'],
       options: {
         vendors: ['-moz-', '-webkit-']
       }
