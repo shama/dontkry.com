@@ -157,6 +157,17 @@ hr {
     height: 30px;
     float: right;
   }
+  .deprecated {
+    @include border-radius(3px);
+    background-color: #f2dede;
+    color: #b94a48;
+    border: 1px solid #ebccd1;
+    padding: 10px;
+    margin-bottom: 20px;
+    b {
+      font-weight: bold;
+    }
+  }
   h2 {
     margin-top: 10px;
     text-transform: uppercase;

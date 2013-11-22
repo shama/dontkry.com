@@ -14,6 +14,12 @@ layout: default
       <% } %>
   </div>
   <div class="content">
+    <% if (document.deprecated) { %>
+      <div class="deprecated">
+        <b>Warning: This post may no longer be accurate or valid.</b><br/>
+        &nbsp;&nbsp;&nbsp;Reason: <em><%- document.deprecated %></em>
+      </div>
+    <% } %>
     <%- headersToLinks(content) %>
   </div>
 
