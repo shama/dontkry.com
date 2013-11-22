@@ -224,8 +224,13 @@ hr {
 }
 
 .share {
-  padding: 10px 5px 0 5px;
+  padding: 10px;
   background-color: #ccc;
+  @include clearfix();
+  .addthis_toolbox {
+    width: 50%;
+    float: left;
+  }
 }
 
 .nav {
