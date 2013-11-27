@@ -2,3 +2,4 @@ dist/
 node_modules/
 .sass-cache/
 secret.json
+.DS_Store
