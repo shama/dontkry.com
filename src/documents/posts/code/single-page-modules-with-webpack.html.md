@@ -105,8 +105,8 @@ var Bear = require('exports?Bear!./module.js');
 What about large libraries you would normally just throw in a script tag and don't want to parse like **jQuery, Ember, Handlebars, etc**? Use the [script-loader](https://npmjs.org/package/script-loader) and it will act as if you added a script tag BUT! without extra the network request:
 
 ``` javascript
-require('script!jquery/jquery.js');
-$('body').append($('<div/>').html('Hooray!'));
+require('script!ember/ember.js');
+var App = Ember.Application.create();
 ```
 
 Have a library that uses **CoffeeScript** and didn't include a compiled version? Use the [coffee-loader](http://npmjs.org/coffee-loader):
@@ -138,7 +138,7 @@ Now any file that ends with `.coffee` such as, `require('./lib/bear.coffee')` wi
 ## Everything is a Module
 Probably most unique to webpack is **everything is a module**. CSS, images, fonts... all are modules.
 
-Need to read a CSS file? Use the [css-loader](http://npmjs.org/css-loader) BUT! the best part is `@import` statements are treated like `require()` statements:
+Need to read a CSS file? Use the [css-loader](http://npmjs.org/css-loader) BUT! the best part is `@import` and `url(...)` statements are treated like `require()` statements:
 
 ``` css
 /* node_modules/bear/style.css */
@@ -149,8 +149,10 @@ Need to read a CSS file? Use the [css-loader](http://npmjs.org/css-loader) BUT! 
 
 ``` css
 /* app/css/style.css */
-@import 'css!bear/style.css'
+@import '~bear/style.css';
 ```
+
+*Prepending `~` instructs webpack the @import is to be resolved as a module.*
 
 ``` javascript
 // app/index.js
@@ -192,7 +194,7 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.css$/, loader: 'style!css' },
-      { test: /\.styl$/, loader: 'style!stylus' },
+      { test: /\.styl$/, loader: 'style!css!stylus' },
     ],
   },
 };
@@ -240,7 +242,7 @@ Webpack, for obvious reasons, does not recursively bundle potential modules with
 One use case is for automatically loading a subset of modules:
 
 ``` javascript
-var requireTest = require.context('./', true, /_test\.js$/);
+var requireTest = require.context('./test', true, /_test\.js$/);
 requireTest.keys().forEach(requireTest);
 ```
 
