@@ -29,10 +29,9 @@ Bundling your entire app into a single file for large apps doesn't really work. 
 At any time, you can have a portion of your app load asynchronously by using an AMD-like syntax:
 
 ``` javascript
-require([], function() {
+require(['d3'], function(d3) {
   // The `d3` module will go into another file
   // and loaded with another request when needed
-  var d3 = require('d3');
 });
 ```
 
@@ -43,12 +42,19 @@ module.exports = Ember.Route.extend({
   model: function(params) {
     return new Ember.RSVP.Promise(function(resolve) {
       // Asynchronously load this large data chunk module
-      require([], function() {
-        var data = require('./data/large.js');
+      require(['./data/large.js'], function(data) {
         resolve(data);
       });
     });
   }
+});
+```
+
+You can still asynchronously load modules and use the node.js module format by supplying an empty array:
+
+``` javascript
+require([], function() {
+  var d3 = require('d3');
 });
 ```
 
