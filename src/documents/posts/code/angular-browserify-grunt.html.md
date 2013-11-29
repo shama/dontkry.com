@@ -34,12 +34,16 @@ Then in your `package.json` add the following install script:
 ``` json
 {
   "scripts": {
-    "install": "napa angular/bower-angular:angular"
+    "install": "napa"
+  },
+  "napa": {
+    "angular": "angular/bower-angular",
+    "angular-route": "angular/bower-angular-route"
   }
 }
 ```
 
-Now any time you run `npm install` it will also install AngularJS into the `node_modules/angular/` folder from their official release.
+Now any time you run `npm install` it will also install AngularJS into the `node_modules/angular/` folder and Angular Route into the `node_modules/angular-route/` from their official releases.
 
 ### Folder Structure
 Let's setup a folder structure based upon the [angular-seed](https://github.com/angular/angular-seed) example. Create the files and folders to make your app look like the following (don't worry about what's in them right now):
@@ -131,9 +135,10 @@ Getting Angular to play nice with Browserify is incredibly simple. In your `app/
 // This will include ./node_modules/angular/angular.js
 // and give us access to the `angular` global object.
 require('angular/angular');
+require('angular-route/angular-route');
 
 // Create your app
-angular.module('myApp', []).config(['$routeProvider', function($routeProvider) {
+angular.module('myApp', ['ngRoute']).config(['$routeProvider', function($routeProvider) {
   // Specify routes to load our partials upon the given URLs
   $routeProvider.when('/view1', {templateUrl: 'partials/partial1.html'});
   $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html'});
