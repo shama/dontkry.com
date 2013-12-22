@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Roommates"
-description: "The reason the Node.js elite hates Grunt"
+description: ""
 date: 2013-12-22
 project: comics
 ---
