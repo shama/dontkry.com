@@ -32,7 +32,8 @@
     "voxel-engine": "~0.17.3",
     "voxel-player": "~0.1.0",
     "highlight.js": "~7.3.0",
-    "jquery-browserify": "~1.8.1"
+    "jquery-browserify": "~1.8.1",
+    "cheerio": "^0.17.0"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

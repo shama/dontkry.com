@@ -1,6 +1,7 @@
 module.exports = ->
   path = require('path')
   _s = require('underscore.string')
+  cheerio = require('cheerio')
   config =
     outPath: 'dist'
     templateData:
@@ -15,21 +16,16 @@ module.exports = ->
           @document.title + ' | ' + @site.title
         else
           @site.title
-
       
       # convert h2 headers to anchor links
       headersToLinks: ->
-        content = @content
         if @document.extension is 'md'
-          headers = content.match(/<h2>(.+)<\/h2>/g)
-          if headers
-            headers.forEach (header) ->
-              header = /<h2>(.+)<\/h2>/g.exec(header)
-              link = _s.slugify(header[1])
-              link = '<h2><a href=\'#' + link + '\' name=\'' + link + '\'>' + header[1] + '</a></h2>'
-              content = content.replace(header[0], link)
-
-        content
+          $ = cheerio.load(@content)
+          $('h2').each (h2) ->
+            id = $(@).attr('id')
+            a = $('<a/>').attr(href:'#'+id,name:id).html($(@).html())
+            $(@).empty().append(a)
+        return $.html()
 
       printItems: (items) ->
         out = ''
