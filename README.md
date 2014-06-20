@@ -1,4 +1,4 @@
-# [dontkry.com](http://dontkry.com) [![Built with Grunt](http://cdn.gruntjs.com/cdn/bwg.png)](http://gruntjs.com/)
+# [dontkry.com](http://dontkry.com)
 
 My website. A work in progress.
 
