@@ -4,6 +4,9 @@ title: "AngularJS, Browserify and Grunt"
 description: ""
 date: 2013-08-30
 ---
+
+> **UPDATE:** There is an official [angular package](https://npmjs.org/package/angular) now on npm. Also [@bclinkinbeard](https://twitter.com/bclinkinbeard) has been working and writing some great stuff combining Angular with Browserify, go check out his site as well: [http://benclinkinbeard.com](http://benclinkinbeard.com/).
+
 Let's setup a new project that uses [AngularJS](http://angularjs.org), [Browserify](http://browserify.org) and [Grunt](http://gruntjs.com).
 
 > This tutorial assumes you have Node.js installed and are familiar with it and Grunt.  
