@@ -23,7 +23,7 @@ module.exports = ->
         options:
           base: 'dist/'
 
-    clean: ['dist/']
+    clean: ['dist/*']
 
     watch:
       docs:
