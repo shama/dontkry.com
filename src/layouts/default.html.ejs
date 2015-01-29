@@ -4,33 +4,20 @@
   <meta charset="UTF-8">
   <title><%= getPreparedTitle() %></title>
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <link rel="alternate" type="application/rss+xml" title="dontkry.com" href="http://www.dontkry.com/rss.xml">
 </head>
 <body class="body-<%- document.slug %>">
   <div class="container">
-    
-    <div class="header">
-      <ul>
-        <li class="avatar">
-          <a href="/">
-            <img src="http://www.gravatar.com/avatar/5211ea711bb06482530172f77732f61a.png" class="round" /></a>
-        <li class="name">
-          kyle robinson young
-        <li class="icons">
-        <% var icons = ['github', 'twitter', 'ynab', 'gruntjs', 'voxeljs'] %>
-        <% for (var i = 0; i < icons.length; i++) { %>
-          <div class="icon">
-            <%- partial('icons/' + icons[i]) %>
-          </div>
-        <% } %>
-        <br class="clear" />
-        <li class="nav">
-          <a href="/">blog</a><br/>
-          <a href="/projects.html">projects</a><br/>
-          <a href="/about.html">about</a><br/>
-      </ul>
-    </div>
+
+    <ul class="topbar">
+      <li>kyle robinson young</li>
+      <li><a href="/">blog</a></li>
+      <li><a href="/about.html">about</a></li>
+      <li><a href="http://twitter.com/shamakry" target="_blank">twitter</a></li>
+      <li><a href="https://github.com/shama" target="_blank">github</a></li>
+    </ul>
 
     <div class="content">
       <%- content %>

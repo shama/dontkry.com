@@ -3,15 +3,15 @@ layout: default
 ---
 <div class="post">
   <div class="header">
-    <h1><%- document.title %></h1>
-    <em class="date"><%- document.date.toDateString() %></em>
     <% if (document.project) { %>
-        <div class="project">
-          <%- partial('icons/' + document.project) %>
-        </div>
-      <% } else { %>
-        <div class="icon"><i class="icon-<%= document.icon || 'picture' %> icon-white"></i></div>
-      <% } %>
+      <div class="project">
+        <%- partial('icons/' + document.project) %>
+      </div>
+    <% } else { %>
+      <div class="icon"><i class="icon-<%= document.icon || 'picture' %> icon-white"></i></div>
+    <% } %>
+    <h2><%- document.title %></h2>
+    <em class="date"><%- document.date.toDateString() %></em>
   </div>
   <div class="content">
     <% if (document.deprecated) { %>
@@ -23,11 +23,9 @@ layout: default
     <%- headersToLinks(content) %>
   </div>
 
-  <div class="edit">
-    <%- ghedit() %>
-  </div>
-
   <%- partial('share') %>
 </div>
 
-<%- partial('disqus') %>
+<div class="comments">
+  Leave a comment by writing a blog post on your website.
+</div>

@@ -1,0 +1,144 @@
+@import "nib";
+
+global-reset()
+
+body
+  background-color: #fff
+  font-size: 80%
+  font-family: 'Open Sans', Verdana, sans-serif
+  line-height: 18px
+  color: #333
+
+a
+  color: #333
+  &:hover
+    color: #000
+    text-decoration: none
+
+h1
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif
+  font-size: 120%
+
+h1,h2,h3
+  font-weight: bold
+
+em
+  font-style: italic
+
+strong
+  font-weight: bold
+
+blockquote
+  border-left: 4px solid #ddd
+  margin: 0 5px
+  padding: 3px 5px
+  color: #777
+
+pre
+  font-family: monospace
+  font-size: 1.2em
+
+hr
+  width: 100%
+  border: 0
+  border-bottom: 8px dotted #eee
+
+.clear
+  width: 100%
+  display: block
+  clear: both
+  clearfix()
+
+.container
+  width: 80%
+  margin: 5em auto
+
+.topbar
+  width: 80%
+  padding: 1em 0
+  margin-bottom: 1em
+  border-bottom: 1px solid #ddd
+  position: fixed
+  top: 0
+  left: 50%
+  margin-left: -40%
+  background-color: #fff
+  clearfix()
+  li
+    float: right
+    margin: 0 .5em
+    &:first-child
+      font-weight: bold
+
+// Front page posts
+.posts
+  clearfix()
+  padding: 1em 0
+  border-bottom: 1px solid #ddd
+  transition: padding-bottom .3s
+  &:hover
+    padding-bottom: 2em
+  h2
+    a
+      font-size: 1.5em
+      text-transform: uppercase
+      text-decoration: none
+  .project
+    border-radius(20em)
+    border: 1px solid #ddd
+    margin-left: -50px
+    overflow: hidden
+    width: 40px
+    height: 40px
+    float: left
+    text-align: center
+    img
+      width: 100%
+
+// Individual posts
+.post
+  clearfix()
+  margin: 0 0 2em 0
+  .project
+    border-radius(20em)
+    border: 1px solid #ddd
+    margin-left: -70px
+    overflow: hidden
+    width: 60px
+    height: 60px
+    float: left
+    text-align: center
+    img
+      width: 100%
+  .header > h2
+    line-height: 2em
+    font-size: 2em
+  .content
+    clearfix()
+    margin: 2em 0
+    border-bottom: 1px solid #ddd
+    h2
+      margin-top: 1em
+      font-size: 1.5em
+      text-transform: uppercase
+      a
+        text-decoration: none
+  pre,p
+    margin: 1em 0
+  p
+    width: 65%
+  .share
+    float: left
+    width: 50%
+  .license
+    float: right
+    width: 50%
+    text-align: right
+
+.comments
+  clearfix()
+  text-align: center
+  padding: 3em 0
+  border-top: 1px solid #ddd
+  font-style: italic
+  color: #aaa

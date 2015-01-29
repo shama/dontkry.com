@@ -10,10 +10,8 @@ posts.sort(function(a, b) {
 %>
 <% for (var i = 0; i < posts.length; i++) { %>
   <% var post = posts[i]; %>
-  <section class="post">
+  <section class="posts">
     <div class="header">
-      <h1><a href="<%= post.url %>"><%= post.title %></a></h1>
-      <em class="date"><%- post.date.toDateString() %></em>
       <% if (post.project) { %>
         <div class="project">
           <%- partial('icons/' + post.project) %>
@@ -21,6 +19,8 @@ posts.sort(function(a, b) {
       <% } else { %>
         <div class="icon"><i class="icon-<%= post.icon || 'picture' %> icon-white"></i></div>
       <% } %>
+      <h2><a href="<%= post.url %>"><%= post.title %></a></h2>
+      <em class="date"><%- post.date.toDateString() %></em>
     </div>
     <p><%- post.description %></p>
   </section>
