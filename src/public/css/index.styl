@@ -58,6 +58,9 @@ hr
 .container
   width: 80%
   margin: 5em auto
+  @media (max-width: 600px)
+    width: 100%
+    margin: 0
 
 .topbar
   width: 80%
@@ -70,11 +73,21 @@ hr
   margin-left: -40%
   background-color: #fff
   clearfix()
+  @media (max-width: 600px)
+    width: 95%
+    padding: 1em 0
+    position: static
+    margin: 0 auto
+
   li
     float: right
     margin: 0 .5em
     &:first-child
       font-weight: bold
+
+.content
+  @media (max-width: 600px)
+    padding: 1em
 
 // Front page posts
 .posts
@@ -129,10 +142,16 @@ hr
       text-transform: uppercase
       a
         text-decoration: none
-  pre,p
+  pre
     margin: 1em 0
+    @media (max-width: 600px)
+      background-color: #272822
+      overflow: scroll
   p
+    margin: 1em 0
     width: 65%
+    @media (max-width: 600px)
+      width: 100%
   .share
     float: left
     width: 50%
