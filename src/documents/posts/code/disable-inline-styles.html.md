@@ -46,22 +46,20 @@ Setting the `style` attribute via JavaScript:
 document.body.setAttribute('style', 'background-color:red;')
 ```
 
-Or the use case that is quickly on the rise, dynamically created inline `style`
-attributes with single page app framework:
-``` javascript
-var React = require('react')
-class MyThing extends React.Component {
-  render() {
-    var styles = {
-      border: '1px solid red'
-    }
-    return (<div style={styles}></div>)
-  }
-}
-```
+### Single Page App Libraries
+Single page app focused frameworks/libraries like React, Ember, Angular,
+Mercury, etc make it easier to create inline styles. As such, there seems to be
+a rising trend using inline styles and many "modular CSS" solutions are emerging.
 
-> Note: This is not specific to React, all JavaScript libraries that can create
-> inline styles have this potential.
+Be aware, most of these solutions rely on inline styles via a inline `<style>`
+tag and/or inline `style` attribute. Each have different methods of escaping
+(or not escaping) data as it's written inline using one of the above methods.
+
+I'm not advocating any of these libraries are insecure nor providing any
+example exploits here.
+
+However I am suggesting, that maybe overusing inline styles right next to all
+that dynamic user data, might not be the best idea.
 
 ## Attacking with CSS
 The primary vulnerability of CSS comes when an attacker is allowed to inject data
