@@ -9,50 +9,71 @@
     "email": "kyle@dontkry.com",
     "url": "http://dontkry.com"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/shama/dontkry.com.git"
-  },
+  "repository": "git://github.com/shama/dontkry.com.git",
   "bugs": {
     "url": "https://github.com/shama/dontkry.com/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/shama/dontkry.com/blob/master/LICENSE-MIT"
-    }
-  ],
+  "licenses": "MIT",
   "scripts": {
-    "start": "grunt dev"
+    "start": "budo index.js:bundle.js --css app/css/index.css -- -t csjs-injectify",
+    "build": "node build.js"
   },
   "engines": {
     "node": ">= 0.8.0"
   },
   "dependencies": {
-    "voxel-engine": "~0.17.3",
-    "voxel-player": "~0.1.0",
-    "highlight.js": "~7.3.0",
-    "jquery-browserify": "~1.8.1",
-    "cheerio": "^0.17.0"
+    "attach-css": "^1.1.0",
+    "base-element": "^3.0.1",
+    "base-router": "^1.1.0",
+    "base-svg-element": "^1.0.0",
+    "blaster": "^1.1.0",
+    "browserify": "^10.2.4",
+    "csjs": "^1.0.1",
+    "global": "^4.3.0",
+    "highlight.js": "^9.2.0",
+    "html-to-vdom": "^0.5.5",
+    "inherits": "^2.0.1",
+    "jquery": "^2.1.4",
+    "marked": "^0.3.3",
+    "moment": "^2.12.0",
+    "nets": "^3.2.0",
+    "nib": "^1.1.0",
+    "stylus": "^0.51.1",
+    "through2": "^0.6.5",
+    "vdom-to-html": "^2.1.1",
+    "vinyl-fs": "^1.0.0",
+    "virtual-dom": "^2.0.1",
+    "xhr": "^2.0.1",
+    "yo-yo": "^1.0.1"
   },
   "devDependencies": {
-    "beefy": "~0.4.4",
-    "docpad-plugin-ejs": "git://github.com/perpetual-motion/docpad-plugin-ejs",
-    "docpad-plugin-images": "~2.0.0",
-    "docpad-plugin-marked": "~2.1.1",
-    "docpad-plugin-partials": "~2.6.2",
-    "docpad-plugin-rss": "~2.0.1",
-    "grunt": "^0.4.5",
-    "grunt-beep": "~0.3.0",
-    "grunt-browserify": "~1.0.3",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-connect": "~0.3.0",
-    "grunt-contrib-stylus": "^0.20.0",
-    "grunt-contrib-watch": "~0.5.2",
-    "grunt-docs": "~0.5.0",
-    "matchdep": "~0.1.2",
-    "nib": "^1.1.0",
-    "underscore.string": "^2.3.3"
+    "babel-preset-es2015": "^6.3.13",
+    "babel-register": "^6.3.13",
+    "babelify": "^6.1.2",
+    "base-router": "^1.1.0",
+    "budo": "^8.1.0",
+    "csjs-injectify": "^1.0.0",
+    "ecstatic": "^0.8.0",
+    "electron-prebuilt": "^0.37.1",
+    "electron-spawn": "^4.1.1",
+    "gaze": "^0.5.2",
+    "glob": "^7.0.3",
+    "marked": "^0.3.3",
+    "mkdirp": "^0.5.1",
+    "runs": "^1.0.0",
+    "vinyl": "^1.1.0",
+    "vinyl-fs": "^1.0.0",
+    "yfm": "^0.2.0",
+    "zuul": "^3.0.0"
   },
-  "keywords": []
+  "keywords": [],
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "browser": {
+    "fs": false,
+    "glob": false
+  }
 }

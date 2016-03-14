@@ -1,0 +1,129 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+body {
+  background-color: #ecf0f1;
+  font-size: 100%;
+  font-family: 'Open Sans', Verdana, sans-serif;
+  line-height: 1.5em;
+  padding: 0;
+  margin: 0;
+  color: #2c3e50;
+}
+a {
+  color: #34495e;
+}
+a:hover {
+  text-decoration: none;
+  color: #3498db;
+}
+h1 {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 120%;
+}
+h1,h2,h3 {
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+em {
+  font-style: italic;
+}
+strong {
+  font-weight: bold;
+}
+blockquote {
+  border-left: 4px solid #ddd;
+  margin: 0 5px;
+  padding: 3px 5px;
+  color: #777;
+}
+code {
+  background-color: #eee;
+  padding: .1em .3em;
+  border-radius: .3em;
+  border: 1px solid #ddd;
+}
+pre {
+  font-family: monospace;
+  font-size: 1.2em;
+}
+pre code {
+  background-color: transparent;
+  border: none;
+}
+hr {
+  width: 100%;
+  border: 0;
+  border-bottom: 8px dotted #eee;
+}
+
+/*
+Monokai style - ported by Luigi Maselli - http://grigio.org
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #272822; color: #ddd;
+}
+
+.hljs-tag,
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-strong,
+.hljs-name {
+  color: #f92672;
+}
+
+.hljs-code {
+  color: #66d9ef;
+}
+
+.hljs-class .hljs-title {
+  color: white;
+}
+
+.hljs-attribute,
+.hljs-symbol,
+.hljs-regexp,
+.hljs-link {
+  color: #bf79db;
+}
+
+.hljs-string,
+.hljs-bullet,
+.hljs-subst,
+.hljs-title,
+.hljs-section,
+.hljs-emphasis,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-tag,
+.hljs-template-variable {
+  color: #a6e22e;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-doctag,
+.hljs-title,
+.hljs-section,
+.hljs-type,
+.hljs-selector-id {
+  font-weight: bold;
+}
