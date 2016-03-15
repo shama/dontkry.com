@@ -57,6 +57,22 @@ hr {
   border-bottom: 8px dotted #eee;
 }
 
+.app {
+  display: flex;
+}
+.nav {
+  flex: auto;
+  width: 20%;
+  padding: 1em;
+  position: fixed;
+}
+.content {
+  flex: auto;
+  width: 80%;
+  padding: 1em;
+  margin-left: 20%;
+}
+
 /*
 Monokai style - ported by Luigi Maselli - http://grigio.org
 */
