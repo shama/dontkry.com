@@ -66,6 +66,7 @@ function compileJS () {
 }
 
 function compileCSS () {
+  // TODO: Extract out the CSS rather than use csjs-injectify
   fs.createReadStream(path.join(__dirname, 'app', 'css', 'index.css'))
     .pipe(fs.createWriteStream(path.join(dist, 'index.css')))
 }
