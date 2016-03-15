@@ -6,7 +6,7 @@ module.exports = function posts (posts) {
   return yo`<ul class="${styles.posts} posts">
     ${posts.map(function (post) {
       return yo`<li>
-        <h2><a href="/#/posts/${post.slug}">${post.title}</a></h2>
+        <h2><a href="/${post.slug}">${post.title}</a></h2>
         <em>${moment(post.date).format('MMMM Do YYYY')}</em>
         <p>${post.description}</p>
       </li>`

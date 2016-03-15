@@ -6,7 +6,7 @@ var mdtohtml = require('../lib/mdtohtml')
 module.exports = function api_post (slug, done) {
   if (process.browser) {
     nets({
-      url: '/app/content/posts/' + slug
+      url: '/content/posts/' + slug + '.md'
     }, function (err, res, body) {
       if (err) return done(err)
       resultToPost(body, done)

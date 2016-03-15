@@ -27,4 +27,4 @@ var mounted = document.querySelector(className)
 if (!mounted) document.body.appendChild(app())
 
 // Start on hash or /
-router.transitionTo(location.hash.slice(1) || '/')
+router.transitionTo(location.pathname || '/')

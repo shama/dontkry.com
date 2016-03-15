@@ -12,8 +12,10 @@ var router = require('./app/router.js')
 
 // paths
 var dist = path.join(__dirname, 'dist')
-var postsPath = path.join(__dirname, 'app', 'content', 'posts')
+var indexPath = path.join(dist, 'content', 'index.json')
+var postsPath = path.join(__dirname, 'app', 'content')
 mkdirp(dist)
+mkdirp(path.dirname(indexPath))
 
 glob('**/*.html.md', { cwd: postsPath }, function (err, files) {
   var posts = []
@@ -24,13 +26,19 @@ glob('**/*.html.md', { cwd: postsPath }, function (err, files) {
     var filepath = path.join(postsPath, slug)
     var md = mdtohtml(fs.readFileSync(filepath))
     if (!md) return
-    postsRoutes.push('/posts/' + slug)
+    postsRoutes.push('/' + slug)
     posts.push({
       title: md.context.title,
       date: md.context.date,
       description: md.context.description,
-      slug: slug
+      slug: slug.slice(0, -3)
     })
+    // Copy the raw md content
+    // TODO: Convert to HTML here? Weird file DB you got KRY
+    var outFilepath = path.join(dist, 'content', slug)
+    mkdirp(path.dirname(outFilepath))
+    fs.createReadStream(filepath)
+      .pipe(fs.createWriteStream(outFilepath))
   })
 
   // Sort by date descending
@@ -42,7 +50,7 @@ glob('**/*.html.md', { cwd: postsPath }, function (err, files) {
   var index = JSON.stringify({
     posts: posts
   }, null, 2)
-  fs.writeFileSync(path.join(dist, 'index.json'), index)
+  fs.writeFileSync(indexPath, index)
 
   compileHTML(postsRoutes, function () {
     compileCSS()

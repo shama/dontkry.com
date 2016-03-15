@@ -18,7 +18,7 @@ module.exports = createRouter({
   '/about.html': function () {
     return about()
   }
-}, { location: 'hash' })
+})
 
 function postRoute (which) {
   return function (params, done) {

@@ -1,5 +1,5 @@
 var fs = require('fs')
-var mkdirp = require('mkdirp')
+var mkdirp = require('mkdirp').sync
 var app = require('./app/index.js')
 var router = require('./app/router.js')
 
@@ -33,15 +33,14 @@ router.on('transition', function (route, page) {
   }
   var filename = route === '/' ? '/index.html' : route
   filename = path.join(dist, filename)
-  mkdirp(path.dirname(filename), function () {
-    fs.writeFile(filename, html, function () {
-      var nextRoute = routes.shift()
-      if (nextRoute) {
-        router.transitionTo(nextRoute)
-      } else {
-        require('remote').require('app').quit()
-      }
-    })
+  mkdirp(path.dirname(filename))
+  fs.writeFile(filename, html, function () {
+    var nextRoute = routes.shift()
+    if (nextRoute) {
+      router.transitionTo(nextRoute)
+    } else {
+      require('remote').require('app').quit()
+    }
   })
 })
 

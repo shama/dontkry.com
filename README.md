@@ -9,5 +9,5 @@ My website. A work in progress.
 
 ## build
 
-- `grunt` - builds the site to the `dist/` folder
-- `grunt dev` - builds, starts a server on `localhost:8000` and watches for changes
+- `npm start` - visit the url `http://localhost:9966` to view.
+- `npm run build` - builds the static assets to `dist/` folder.
