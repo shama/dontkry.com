@@ -21,7 +21,7 @@ app view. Then handles the transition states and loads the initial route.
 source, or in this case markdown files from the server.
 
 Once the markdown file is downloaded, it sends the data to the appropriate
-`app/views/`. The views use `[yo-yo](https://github.com/maxogden/yo-yo)` to turn
+`app/views/`. The views use [yo-yo](https://github.com/maxogden/yo-yo) to turn
 the data into HTML elements.
 
 The router then indicates it has successfully resolved and passes the element
