@@ -1,5 +1,7 @@
 # [dontkry.com](http://dontkry.com)
 
+My over-engineered blog.
+
 ## install
 
 - `git clone git://github.com/shama/dontkry.com && cd dontkry.com`
