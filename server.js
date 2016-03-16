@@ -1,4 +1,5 @@
 var fs = require('fs')
+var path = require('path')
 var mkdirp = require('mkdirp').sync
 var app = require('./app/index.js')
 var router = require('./app/router.js')
