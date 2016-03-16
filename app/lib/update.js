@@ -5,11 +5,5 @@ module.exports = function update (f, t) {
   if (typeof f === 'string') {
     f = document.querySelector(f)
   }
-  function onmorph (f, t) {
-    f.onclick = t.onclick
-  }
-  yo.update(f, t, {
-    onBeforeMorphEl: onmorph,
-    onBeforeMorphElChildren: onmorph
-  })
+  yo.update(f, t)
 }
