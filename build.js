@@ -13,7 +13,7 @@ var router = require('./app/router.js')
 // paths
 var dist = path.join(__dirname, 'dist')
 var indexPath = path.join(dist, 'content', 'index.json')
-var postsPath = path.join(__dirname, 'app', 'content')
+var postsPath = path.join(__dirname, 'content')
 mkdirp(dist)
 mkdirp(path.dirname(indexPath))
 

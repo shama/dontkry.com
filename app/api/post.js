@@ -12,7 +12,7 @@ module.exports = function api_post (slug, done) {
       resultToPost(body, done)
     })
   } else {
-    var filename = path.join(__dirname, '..', 'content', 'posts', slug)
+    var filename = path.join(__dirname, '..', '..', 'content', 'posts', slug)
     fs.readFile(filename, function (err, body) {
       if (err) return done(err)
       resultToPost(body, done)
