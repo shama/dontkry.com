@@ -9,23 +9,23 @@ module.exports = function api_post (slug, done) {
       url: '/content/posts/' + slug + '.md'
     }, function (err, res, body) {
       if (err) return done(err)
-      resultToPost(body, done)
+      resultToPost(body, slug, done)
     })
   } else {
     var filename = path.join(__dirname, '..', '..', 'content', 'posts', slug)
     fs.readFile(filename, function (err, body) {
       if (err) return done(err)
-      resultToPost(body, done)
+      resultToPost(body, slug, done)
     })
   }
 }
 
-function resultToPost (res, done) {
+function resultToPost (res, slug, done) {
   var html = mdtohtml(res)
   if (!html) return done(new Error('Invalid markdown file.'))
   done(null, {
     title: html.context.title,
-    slug: html.context.slug,
+    slug: slug,
     date: html.context.date,
     content: html.html
   })

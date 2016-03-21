@@ -15,7 +15,7 @@
   },
   "licenses": "MIT",
   "scripts": {
-    "start": "budo index.js --dir ./ --dir dist --css css/index.css -- -t csjs-injectify",
+    "start": "budo index.js --dir ./ --dir dist --css css/index.css",
     "build": "node build.js"
   },
   "engines": {
@@ -39,9 +39,13 @@
     "electron-prebuilt": "^0.37.1",
     "electron-spawn": "^4.1.1",
     "glob": "^7.0.3",
-    "mkdirp": "^0.5.1"
+    "mkdirp": "^0.5.1",
+    "yo-yoify": "^1.0.2"
   },
   "keywords": [],
+  "browserify": {
+    "transform": ["yo-yoify", "csjs-injectify"]
+  },
   "browser": {
     "fs": false,
     "glob": false
