@@ -2,8 +2,11 @@
 title: "Peer Dependency Problem"
 description: ""
 date: 2016-03-16
+ignored: true
 ---
 
-Testing
+# Testing 2
 
-<script src=""></script>
+```runjs
+var yo = require('yo-yo')
+```
