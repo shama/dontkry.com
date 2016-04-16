@@ -35,7 +35,6 @@
   },
   "devDependencies": {
     "budo": "^8.1.0",
-    "csjs-injectify": "^1.0.0",
     "electron-prebuilt": "^0.37.1",
     "electron-spawn": "^4.1.1",
     "glob": "^7.0.3",
@@ -44,7 +43,7 @@
   },
   "keywords": [],
   "browserify": {
-    "transform": ["yo-yoify", "csjs-injectify"]
+    "transform": ["yo-yoify"]
   },
   "browser": {
     "fs": false,

@@ -61,7 +61,6 @@ glob('**/*.html.md', { cwd: postsPath }, function (err, files) {
 function compileJS () {
   var b = browserify()
   b.add(path.join(__dirname, 'index.js'))
-  b.transform('csjs-injectify')
   b.bundle().pipe(fs.createWriteStream(path.join(dist, 'index.js')))
 }
 
