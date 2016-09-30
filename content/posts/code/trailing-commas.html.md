@@ -6,7 +6,7 @@ date: 2013-06-06
 ---
 I see this a lot:
 
-> Your extra commas are a bad practice so I've removed them for you.
+> Your extra commas are a bad practice, so I've removed them for you.
 
 **Blindly following something you've heard forever is a bad practice.**
 
