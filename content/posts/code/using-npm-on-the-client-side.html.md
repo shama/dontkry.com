@@ -190,7 +190,7 @@ cp index.html dist/index.html
 If you need build operations a bit more front end friendly consider [Grunt](http://gruntjs.com). Grunt ties build operations together through a `Gruntfile.js`. Each of the tasks source input files and destination output files are normalized through a Grunt config. An example `Gruntfile.js` for the same operations as above would be:
 
 ``` javascript
-module.exports = funciton(grunt) {
+module.exports = function(grunt) {
   grunt.initConfig({
     clean: ['dist/'],
     browserify: {
