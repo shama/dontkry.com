@@ -16,7 +16,7 @@
   "licenses": "MIT",
   "scripts": {
     "start": "budo index.js --dir ./ --dir dist --css css/index.css",
-    "build": "node build.js"
+    "build": "node build.js && cp -R app/images dist/"
   },
   "engines": {
     "node": ">= 0.10.0"
