@@ -26,12 +26,12 @@ Upon initial consideration this structure seems ideal. It takes up the least amo
 For these reasons this structure is commonly used... but **it is incredibly flawed**.
 
 ### TECHNICAL ISSUES
-Updating modules, for most systems, happens frequently. Backwards compatibility and good versioning are not a guarantee. Updating modules will eventually break your apps. Global dependencies mean you are forced to update **ALL** of your apps each time you update a global dependency. 
+Updating modules, for most systems, happens frequently. Backwards compatibility and good versioning are not a guarantee. Updating modules will eventually break your apps. Global dependencies mean you are forced to update **ALL** of your apps each time you update a global dependency.
 
 So unless you only have a couple of projects, keeping every project in step with dependency updates is a nightmare and most of the time not even physically possible.
 
 ### SOCIAL ISSUES
-Global dependencies are not easily shareable as they rely on an environment setup outside of the project. Which usually requires a project to request users (usually via a bulleted list of steps in a readme) or provide a switching mechanism to recreate the environment in order to run the project. 
+Global dependencies are not easily shareable as they rely on an environment setup outside of the project. Which usually requires a project to request users (usually via a bulleted list of steps in a readme) or provide a switching mechanism to recreate the environment in order to run the project.
 
 For diverse teams, especially open source software teams with developers contributing to a diverse array of projects, **this is not practical**.
 
