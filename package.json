@@ -15,35 +15,41 @@
   },
   "licenses": "MIT",
   "scripts": {
-    "start": "budo index.js --dir ./ --dir dist --css css/index.css",
-    "build": "node build.js && cp -R app/images dist/"
+    "start": "node build-html.js --watch & stylus css/index.styl --watch css/index.styl --include-css --out index.css & budo app/index.js:index.js --pushstate",
+    "build": "npm run build-html && npm run build-js && npm run build-css",
+    "build-js": "browserify app/index.js -o dist/index.js",
+    "build-css": "stylus css/index.styl --include-css --compress --out dist/index.css",
+    "build-html": "node build-html.js && mkdir -p dist && cp -R posts dist/posts && cp index.html dist/index.html && cp -R images dist/images"
   },
   "engines": {
     "node": ">= 0.10.0"
   },
   "dependencies": {
     "base-router": "^1.1.0",
-    "browserify": "^10.2.4",
-    "csjs": "^1.0.1",
+    "browserify": "^16.1.0",
     "global": "^4.3.0",
     "highlight.js": "^9.2.0",
     "marked": "^0.3.3",
     "moment": "^2.12.0",
-    "nets": "^3.2.0",
+    "normalize.css": "^8.0.0",
+    "xhr": "^2.4.1",
     "yfm": "^0.2.0",
-    "yo-yo": "^1.1.1"
+    "yo-yo": "^1.4.1"
   },
   "devDependencies": {
-    "budo": "^8.1.0",
-    "electron-prebuilt": "^0.37.1",
-    "electron-spawn": "^4.1.1",
+    "budo": "^11.1.7",
+    "gaze": "^1.1.2",
     "glob": "^7.0.3",
     "mkdirp": "^0.5.1",
-    "yo-yoify": "^1.0.2"
+    "rimraf": "^2.6.2",
+    "stylus": "^0.54.5",
+    "yo-yoify": "^4.3.0"
   },
   "keywords": [],
   "browserify": {
-    "transform": ["yo-yoify"]
+    "transform": [
+      "yo-yoify"
+    ]
   },
   "browser": {
     "fs": false,

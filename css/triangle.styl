@@ -1,0 +1,43 @@
+.triangle {
+  width: 20rem;
+}
+.triangle .base {
+  stroke: $light;
+  fill: $dark;
+  pointer-events: all;
+}
+.triangle .red {
+  fill: rgb(255, 0, 186);
+  animation: fade 10s linear infinite;
+  opacity: 0;
+}
+.triangle .green {
+  fill: rgb(255, 0, 0);
+  animation: fade 10s linear infinite;
+  animation-delay: 4s;
+  opacity: 0;
+}
+.triangle .blue {
+  fill: rgb(0, 255, 240);
+  animation: fade 10s linear infinite;
+  animation-delay: 6s;
+  opacity: 0;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media $mobile {
+  .triangle {
+    width: 10rem;
+  }
+}

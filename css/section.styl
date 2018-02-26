@@ -1,0 +1,48 @@
+section {
+  width: 40rem;
+  text-align: left;
+  margin: .3rem 0;
+  padding: .8rem;
+  line-height: 1.2rem;
+  font-size: 1.2rem;
+  border-bottom: .125rem solid rgba(0, 0, 0, .1);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+section > div {
+  margin-left: 1rem;
+  flex: 1 1 auto;
+}
+section a {
+  display: block;
+}
+section em {
+  text-transform: uppercase;
+  font-size: .8rem;
+}
+section iframe {
+  width: 100%;
+}
+.svg {
+  width: 1rem;
+  fill: $light;
+  pointer-events: all;
+}
+.icon {
+  flex: 0 0 auto;
+  width: 1rem;
+  margin-top: .2rem;
+  rect {
+    fill: $light;
+  }
+  path {
+    fill: $dark;
+    stroke: $dark;
+  }
+}
+@media $mobile {
+  section {
+    width: 90%;
+  }
+}

@@ -1,5 +1,9 @@
-dist/
-node_modules/
-.sass-cache/
-secret.json
+/dist
+/posts
+/node_modules
+/.sass-cache
+/secret.json
+/index.css
+/index.html
 .DS_Store
+/package-lock.json

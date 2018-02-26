@@ -1,41 +1,40 @@
-var yo = require('yo-yo')
-var moment = require('moment')
-var hljs = require('highlight.js')
+const html = require('yo-yo')
+const moment = require('moment')
+const hljs = require('highlight.js')
 hljs.configure({
   languages: ['javascript', 'html', 'shell', 'plain']
 })
 
-module.exports = function post (post) {
-  var content = yo`<div class="post-content"></div>`
-  content.innerHTML = post.content
-  //injectScripts(content, post.slug)
-  // TODO: Replace h2 with anchors
+const navView = require('./nav')
+const triangleView = require('./triangle')
+const footerView = require('./footer')
+
+module.exports = function (post) {
+  const content = html`<div></div>`
+  content.innerHTML = post.html || ''
   highlight(content)
-  return yo`<div class="post">
-    <div class="post-title">
-      <h2>${post.title}</h2>
-      <em>${moment(post.date).format('MMMM Do YYYY')}</em>
-    </div>
-    ${content}
-  </div>`
+  return html`
+    <body class="body-light">
+      <header>
+        <a href="/">
+          ${triangleView()}
+        </a>
+      </header>
+      ${navView()}
+      <article>
+        <h1>${post.context.title}</h1>
+        <em>${moment(post.context.date).format('MMMM Do YYYY')}</em>
+        ${content}
+      </article>
+      ${footerView()}
+    </body>
+  `
 }
 
 function highlight (el) {
-  var codes = el.querySelectorAll('pre code')
+  if (!el.querySelectorAll) return
+  const codes = el.querySelectorAll('pre code')
   for (var i = 0; i < codes.length; i++) {
     hljs.highlightBlock(codes[i])
   }
 }
-
-// function injectScripts (el, slug) {
-//   var scripts = el.querySelectorAll('script')
-//   for (var i = 0; i < scripts.length; i++) {
-//     var script = scripts[i]
-//     var url = '/content/posts/' + slug + '/' + script.textContent
-//     // var s = document.createElement('script')
-//     // s.src = url
-//     // document.body.appendChild(s)
-//     // console.log(url)
-//   }
-//   //console.log(scripts)
-// }

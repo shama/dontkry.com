@@ -1,0 +1,245 @@
+{
+  "videos": [
+    {
+      "videoid": "jKzBJAowmGg",
+      "title": "Getting Started with Electron 1.x",
+      "date": "2016-06-29T00:00:00.000Z"
+    },
+    {
+      "videoid": "MKJHuub6UJI",
+      "title": "Learn to yo-yo (Modular UI Components)",
+      "date": "2016-06-21T00:00:00.000Z"
+    },
+    {
+      "videoid": "c9j0avG5L4c",
+      "title": "ES6 Tagged Template Literals",
+      "date": "2016-06-13T00:00:00.000Z"
+    },
+    {
+      "videoid": "Zk_rX2n3Ml8",
+      "title": "JavaScript Generators",
+      "date": "2016-01-28T00:00:00.000Z"
+    },
+    {
+      "videoid": "-6xpqUluMuc",
+      "title": "Intro to Git for Open Source",
+      "date": "2016-01-20T00:00:00.000Z"
+    },
+    {
+      "videoid": "_3oSWwapPKQ",
+      "title": "JavaScript Modules: ES6 Import and Export",
+      "date": "2016-01-13T00:00:00.000Z"
+    },
+    {
+      "videoid": "y8xPMYwQ0U8",
+      "title": "What is Async JavaScript?",
+      "date": "2016-01-05T00:00:00.000Z"
+    },
+    {
+      "videoid": "LVXY16PJ_jU",
+      "title": "Debugging JavaScript",
+      "date": "2015-10-27T00:00:00.000Z"
+    },
+    {
+      "videoid": "sT_QZT9znGI",
+      "title": "Ember.js Computed Properties",
+      "date": "2015-10-15T00:00:00.000Z"
+    },
+    {
+      "videoid": "JbfNWg6JS4U",
+      "title": "Content Security Policy",
+      "date": "2015-10-06T00:00:00.000Z"
+    },
+    {
+      "videoid": "53OpEYA4zPQ",
+      "title": "Ember.js Fundamentals",
+      "date": "2015-09-24T00:00:00.000Z"
+    },
+    {
+      "videoid": "sR7p_JbEip0",
+      "title": "Intro to LevelDB",
+      "date": "2015-09-14T00:00:00.000Z"
+    },
+    {
+      "videoid": "eofMNcafgMU",
+      "title": "CSS Selector Precedence",
+      "date": "2015-09-07T00:00:00.000Z"
+    },
+    {
+      "videoid": "9qIK8ZC9BnU",
+      "title": "Git Deploying a Website",
+      "date": "2015-09-04T00:00:00.000Z"
+    },
+    {
+      "videoid": "YmaFAKUFmp0",
+      "title": "JavaScript Timers",
+      "date": "2015-08-27T00:00:00.000Z"
+    },
+    {
+      "videoid": "ZJMO-zmErA8",
+      "title": "AJAX HTTP Requests",
+      "date": "2015-08-22T00:00:00.000Z"
+    },
+    {
+      "videoid": "P4mT5Tbx_KE",
+      "title": "Running a Node.js Server Forever",
+      "date": "2015-08-18T00:00:00.000Z"
+    },
+    {
+      "videoid": "KhQkErkEips",
+      "title": "Manipulating JavaScript Arrays",
+      "date": "2015-08-11T00:00:00.000Z"
+    },
+    {
+      "videoid": "C9xGEJ80jjs",
+      "title": "Creating a Node.js CLI",
+      "date": "2015-09-07T00:00:00.000Z"
+    },
+    {
+      "videoid": "9o8B3L0-d9c",
+      "title": "Node.js Process & Child Process",
+      "date": "2015-07-28T00:00:00.000Z"
+    },
+    {
+      "videoid": "ieBtXwHvoNk",
+      "title": "P2P Video Chat with JavaScript / WebRTC",
+      "date": "2015-07-21T00:00:00.000Z"
+    },
+    {
+      "videoid": "gsfbh17Ax9I",
+      "title": "Are Semicolons Necessary in JavaScript?",
+      "date": "2015-07-15T00:00:00.000Z"
+    },
+    {
+      "videoid": "XNbtwyWh9HA",
+      "title": "Intro to WebGL and Shaders",
+      "date": "2015-07-14T00:00:00.000Z"
+    },
+    {
+      "videoid": "TaWKUpahFZM",
+      "title": "Getting Started with webpack",
+      "date": "2015-07-06T00:00:00.000Z"
+    },
+    {
+      "videoid": "lLqCXLYCqTI",
+      "title": "Testing Client/Server JavaScript",
+      "date": "2015-07-01T00:00:00.000Z"
+    },
+    {
+      "videoid": "K-H2amwQ_pU",
+      "title": "Multi Window Electron Desktop Apps",
+      "date": "2015-06-23T00:00:00.000Z"
+    },
+    {
+      "videoid": "g90irqWEqd8",
+      "title": "Async JavaScript with Promises",
+      "date": "2015-06-16T00:00:00.000Z"
+    }
+  ],
+  "posts": [
+    {
+      "layout": "post",
+      "title": "Disable Inline Styles",
+      "date": "2015-04-01T00:00:00.000Z",
+      "slug": "/posts/code/disable-inline-styles.html"
+    },
+    {
+      "layout": "post",
+      "title": "Harness Async JavaScript",
+      "description": "",
+      "date": "2015-01-30T00:00:00.000Z",
+      "slug": "/posts/code/harness-async-javascript.html"
+    },
+    {
+      "layout": "post",
+      "title": "I'm going to nodeconf",
+      "description": "",
+      "date": "2014-07-04T00:00:00.000Z",
+      "slug": "/posts/code/im-going-to-nodeconf.html"
+    },
+    {
+      "layout": "post",
+      "title": "Grunt Tricks: Part Two",
+      "description": "Common Grunt problems and their solutions",
+      "project": "gruntjs",
+      "date": "2014-06-21T00:00:00.000Z",
+      "slug": "/posts/code/grunt-tricks2.html"
+    },
+    {
+      "layout": "post",
+      "title": "Roommates",
+      "description": "",
+      "date": "2013-12-22T00:00:00.000Z",
+      "project": "comics",
+      "slug": "/posts/comics/roommates.html"
+    },
+    {
+      "layout": "post",
+      "title": "Single Page Modules with Webpack",
+      "description": "Bundling modules for ambitious single page applications",
+      "date": "2013-11-28T00:00:00.000Z",
+      "slug": "/posts/code/single-page-modules-with-webpack.html"
+    },
+    {
+      "layout": "post",
+      "title": "Modules: The Right Way",
+      "description": "A mindful exploration into modules",
+      "date": "2013-10-22T00:00:00.000Z",
+      "slug": "/posts/code/modules-the-right-way.html"
+    },
+    {
+      "layout": "post",
+      "title": "Grunt Tricks: Part One",
+      "description": "Common Grunt problems and their solutions",
+      "project": "gruntjs",
+      "date": "2013-10-17T00:00:00.000Z",
+      "slug": "/posts/code/grunt-tricks.html"
+    },
+    {
+      "layout": "post",
+      "title": "AngularJS, Browserify and Grunt",
+      "description": "",
+      "date": "2013-08-30T00:00:00.000Z",
+      "slug": "/posts/code/angular-browserify-grunt.html"
+    },
+    {
+      "layout": "post",
+      "title": "Browserify and the Universal Module Definition",
+      "description": "How I Learned to Stop Worrying and Love the Browserify",
+      "date": "2013-06-14T00:00:00.000Z",
+      "slug": "/posts/code/browserify-and-the-universal-module-definition.html"
+    },
+    {
+      "layout": "post",
+      "title": "Trailing Commas",
+      "description": "They are good",
+      "date": "2013-06-06T00:00:00.000Z",
+      "slug": "/posts/code/trailing-commas.html"
+    },
+    {
+      "layout": "post",
+      "title": "Using npm on the client side",
+      "description": "It is not just for the server side!",
+      "date": "2013-05-28T00:00:00.000Z",
+      "project": "npm",
+      "slug": "/posts/code/using-npm-on-the-client-side.html"
+    },
+    {
+      "layout": "post",
+      "title": "ludum dare 26 - post mortem",
+      "description": "My first ludum dare. Theme: Minimalism.",
+      "date": "2013-04-29T00:00:00.000Z",
+      "project": "voxeljs",
+      "slug": "/posts/games/ludum-dare-26.html"
+    },
+    {
+      "layout": "post",
+      "title": "Use this.files Not this.data",
+      "description": "If your Grunt task handles files you should be using this.files and not this.data",
+      "date": "2013-04-24T00:00:00.000Z",
+      "project": "gruntjs",
+      "icon": "fire",
+      "slug": "/posts/code/2013-04-24-use-this-files.html"
+    }
+  ]
+}

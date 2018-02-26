@@ -1,0 +1,54 @@
+.body-light {
+  background-color: $light;
+  color: $dark;
+}
+.body-light a {
+  color: $dark;
+}
+.body-light header {
+  border-bottom: .125rem solid $dark;
+  line-height: 0rem;
+}
+.body-light .triangle .base {
+  stroke: $dark;
+  fill: $light;
+}
+.body-light .triangle .blue {
+  fill: rgb(255, 255, 255);
+}
+.body-light .triangle .green {
+  fill: rgb(240, 240, 240);
+}
+.body-light .triangle .red {
+  fill: rgb(210, 210, 210);
+}
+.body-light article > h1 {
+  font-size: 3rem;
+  line-height: 3rem;
+  width: 100%;
+  text-align: center;
+}
+.body-light article > em {
+  text-align: right;
+  display: block;
+}
+.body-light article {
+  width: 50rem;
+}
+.body-light article img {
+  width: 100%;
+}
+.body-light footer {
+  border-top: .125rem solid $dark;
+}
+@media $mobile {
+  .body-light header {
+    width: 90%;
+  }
+  .body-light article {
+    width: 90%;
+  }
+  .body-light article pre {
+    font-size: .8rem;
+  }
+}

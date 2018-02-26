@@ -1,0 +1,54 @@
+$dark = #0e1212
+$light = #f2f2f2
+$mobile = 'only screen and (min-device-width : 320px) and (max-device-width : 480px)'
+
+@import '../node_modules/normalize.css/normalize.css'
+@import './hljs'
+
+* {
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+}
+body {
+  font-size: 16px;
+  font-family: "Lato", Verdana, sans-serif;
+  line-height: 1.5em;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+em {
+  font-style: normal;
+}
+
+.body-dark {
+  background-color: $dark;
+  color: $light;
+}
+.body-dark a {
+  color: $light;
+}
+header {
+  width: 50rem;
+  margin-top: 10rem;
+  border-bottom: .125rem solid $light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media $mobile {
+  .body-dark header {
+    width: 90%;
+  }
+}
+
+@import './nav'
+@import './footer'
+@import './triangle'
+@import './post'
+@import './section'

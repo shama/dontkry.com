@@ -1,0 +1,22 @@
+footer {
+  width: 50rem;
+  border-top: .125rem solid $light;
+  padding-top: 1rem;
+  margin: 3rem 0 6rem 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media $mobile {
+  footer {
+    width: 90%;
+    flex-direction: column;
+    text-align: right;
+  }
+  footer a {
+    padding: .8rem 0;
+  }
+  footer span {
+    display: none;
+  }
+}
