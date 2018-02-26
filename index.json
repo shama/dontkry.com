@@ -134,6 +134,81 @@
       "videoid": "g90irqWEqd8",
       "title": "Async JavaScript with Promises",
       "date": "2015-06-16T00:00:00.000Z"
+    },
+    {
+      "videoid": "qN0dkXj7jc0",
+      "title": "Mastering JavaScript Callbacks",
+      "date": "2015-06-10T00:00:00.000Z"
+    },
+    {
+      "videoid": "Uk2bgp8OLT8",
+      "title": "Transform Your Bundles with Browserify",
+      "date": "2015-06-04T00:00:00.000Z"
+    },
+    {
+      "videoid": "Q6TAMCH0lL0",
+      "title": "What is Isomorphic JavaScript?",
+      "date": "2015-06-01T00:00:00.000Z"
+    },
+    {
+      "videoid": "CozSF5abcTA",
+      "title": "Essential ES6 / EES 2015 JavaScript",
+      "date": "2015-05-26T00:00:00.000Z"
+    },
+    {
+      "videoid": "yOSNQZm3Trw",
+      "title": "Node.js / io.js Stream Primer",
+      "date": "2015-05-22T00:00:00.000Z"
+    },
+    {
+      "videoid": "lXJGTtHlf9U",
+      "title": "Getting Started with Virtual DOM",
+      "date": "2015-05-18T00:00:00.000Z"
+    },
+    {
+      "videoid": "dz5SnmBzBXc",
+      "title": "Packaging and Distributing Electron Desktop Apps",
+      "date": "2015-05-05T00:00:00.000Z"
+    },
+    {
+      "videoid": "ojX5yz35v4M",
+      "title": "Creating Desktop Apps with Electron",
+      "date": "2015-04-29T00:00:00.000Z"
+    },
+    {
+      "videoid": "WJWkqf_N3Sg",
+      "title": "JavaScript Prototype Fun",
+      "date": "2015-04-23T00:00:00.000Z"
+    },
+    {
+      "videoid": "qMO-LTOrJaE",
+      "title": "JavaScript Prototypal Inheritance",
+      "date": "2015-04-22T00:00:00.000Z"
+    },
+    {
+      "videoid": "CTAa8IcQh1U",
+      "title": "Getting Started with Browserify",
+      "date": "2015-04-16T00:00:00.000Z"
+    },
+    {
+      "videoid": "TpRYLEFu4Mc",
+      "title": "2D Animations with Canvas and JavaScript",
+      "date": "2015-04-12T00:00:00.000Z"
+    },
+    {
+      "videoid": "jEx9V4uUcg0",
+      "title": "Learning JavaScript Functions",
+      "date": "2015-04-11T00:00:00.000Z"
+    },
+    {
+      "videoid": "Ads1A7pn2LI",
+      "title": "Beginning Client and Server JavaScript with io.js and Node.js",
+      "date": "2015-04-11T00:00:00.000Z"
+    },
+    {
+      "videoid": "VzUBHDQf5Rg",
+      "title": "Beginning with JavaScript",
+      "date": "2015-04-11T00:00:00.000Z"
     }
   ],
   "posts": [

@@ -10,12 +10,15 @@ module.exports = function (state, emit) {
 
 if (window.requestAnimationFrame) {
   const raf = window.requestAnimationFrame.bind(window)
-  const name = new Array(19)
+  const name = new Array(32)
   const names = [
     'SHAMA',
     'KYLE ROBINSON YOUNG',
-    'HELLO',
-    'שלום'
+    'HOW IS YOUR DAY',
+    'READ ANY GOOD BOOKS LATELY',
+    'אתה מדבר עברית',
+    'TAL VEZ HABLAS ESPANOL',
+    'SEE YOU SPACE COWBOY',
   ].map(function (n) {
     if (n.length >= name.length) {
       return n
