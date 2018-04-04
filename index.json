@@ -1,6 +1,21 @@
 {
   "videos": [
     {
+      "videoid": "jY9k4rfXwEI",
+      "title": "Simple P2P in the Browser with WebRTC and SignalHub",
+      "date": "2018-04-03T00:00:00.000Z"
+    },
+    {
+      "videoid": "iFqWU1dxm8U",
+      "title": "Getting Started with Vue.js",
+      "date": "2018-03-27T00:00:00.000Z"
+    },
+    {
+      "videoid": "ocXVlNp-5oU",
+      "title": "DOM Event Listeners",
+      "date": "2018-03-20T00:00:00.000Z"
+    },
+    {
       "videoid": "jKzBJAowmGg",
       "title": "Getting Started with Electron 1.x",
       "date": "2016-06-29T00:00:00.000Z"

@@ -18,6 +18,7 @@ if (window.requestAnimationFrame) {
     'READ ANY GOOD BOOKS LATELY',
     'אתה מדבר עברית',
     'TAL VEZ HABLAS ESPANOL',
+    'LET MY CAMERON GO',
     'SEE YOU SPACE COWBOY',
   ].map(function (n) {
     if (n.length >= name.length) {
