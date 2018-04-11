@@ -1,6 +1,11 @@
 {
   "videos": [
     {
+      "videoid": "Ipa58NVGs_c",
+      "title": "How To Make Chrome Extensions",
+      "date": "2018-04-10T00:00:00.000Z"
+    },
+    {
       "videoid": "jY9k4rfXwEI",
       "title": "Simple P2P in the Browser with WebRTC and SignalHub",
       "date": "2018-04-03T00:00:00.000Z"
