@@ -1,6 +1,16 @@
 {
   "videos": [
     {
+      "videoid": "gZ4MCb2nlfQ",
+      "title": "JavaScript Proxy",
+      "date": "2018-04-25T00:00:00.000Z"
+    },
+    {
+      "videoid": "gw1U13kFA9E",
+      "title": "Tour of My Totally Professional Home Studio",
+      "date": "2018-04-24T00:00:00.000Z"
+    },
+    {
       "videoid": "Nnnx9ytFqK4",
       "title": "Drawing and Animating SVGs",
       "date": "2018-04-18T00:00:00.000Z"
