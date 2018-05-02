@@ -1,6 +1,11 @@
 {
   "videos": [
     {
+      "videoid": "Qsku8RfB-pM",
+      "title": "Easier WebGL & Shaders with stack.gl",
+      "date": "2018-05-02T00:00:00.000Z"
+    },
+    {
       "videoid": "gZ4MCb2nlfQ",
       "title": "JavaScript Proxy",
       "date": "2018-04-25T00:00:00.000Z"
