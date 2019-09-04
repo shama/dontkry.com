@@ -1,6 +1,21 @@
 {
   "videos": [
     {
+      "videoid": "oL7vIDkDOsg",
+      "title": "Electron with webpack and Vue.js",
+      "date": "2018-05-28T00:00:00.000Z"
+    },
+    {
+      "videoid": "-AR-6X_98rM",
+      "title": "JavaScript FileReader",
+      "date": "2018-05-22T00:00:00.000Z"
+    },
+    {
+      "videoid": "Hn2zzi_lquA",
+      "title": "JavaScript Mutation Observer",
+      "date": "2018-05-14T00:00:00.000Z"
+    },
+    {
       "videoid": "IqPJb6o_S1Q",
       "title": "I MADE A WEBRTC MISTAKE",
       "date": "2018-05-09T00:00:00.000Z"
